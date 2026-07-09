@@ -48,3 +48,10 @@ export function collectProjectTags(entries: ProjectEntry[]) {
     left.localeCompare(right)
   );
 }
+
+export function slugifyTag(tag: string) {
+  return tag
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}

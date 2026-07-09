@@ -419,14 +419,25 @@ main {
 
 .tag,
 .filter-chip {
+  display: inline-flex;
+  align-items: center;
   border: 2px solid var(--border);
   border-radius: 0;
-  padding: 0.32rem 0.7rem;
+  padding: 0 0.7rem;
   font-family: 'Templo Fino', 'Courier New', monospace;
   font-size: 0.76rem;
+  line-height: 1;
   color: var(--muted);
   background: var(--surface-strong);
   text-transform: uppercase;
+}
+
+.tag {
+  height: 1.45rem;
+}
+
+.tag-link {
+  text-decoration: none;
 }
 
 .filter-chip {
