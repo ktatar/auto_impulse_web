@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Kıvanç Tatar portfolio built with Astro, Markdown, and a BibTeX publications library.' } = Astro.props as Props;
+const { title, description = 'Kıvanç Tatar personal website' } = Astro.props as Props;
 const pathname = Astro.url.pathname;
 const navigation = [
   { href: '/', label: 'News' },
@@ -15,8 +15,7 @@ const navigation = [
   { href: '/bio', label: 'Bio' },
   { href: '/press', label: 'Press' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/nfts', label: 'NFTs' }
+  { href: '/contact', label: 'Contact' }
 ];
 ---
 <!doctype html>
@@ -44,7 +43,7 @@ const navigation = [
         <slot />
       </main>
       <footer class="site-footer">
-        <span>Astro, Markdown, and BibTeX</span>
+        <span>Copyright Kıvanç Tatar ©2026</span>
         <span>kivanctatar.com</span>
       </footer>
     </div>

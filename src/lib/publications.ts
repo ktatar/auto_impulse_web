@@ -12,6 +12,7 @@ export type Publication = {
   year: number | null;
   venue: string;
   url: string;
+  doi: string;
   note: string;
 };
 
@@ -92,6 +93,7 @@ export function loadPublications() {
       year: Number.isFinite(year) ? year : null,
       venue: formatVenue(tags),
       url: firstDefined([tags.url, tags.doi ? `https://doi.org/${stripBraces(tags.doi)}` : '']),
+      doi: stripBraces(firstDefined([tags.doi])),
       note: firstDefined([tags.note])
     } satisfies Publication;
   });
@@ -128,10 +130,60 @@ export function groupPublications(publications: Publication[]) {
     });
 }
 
-export function formatPublicationCitation(publication: Publication) {
-  const authorText = publication.authors.join(', ');
-  const yearText = publication.year ? `(${publication.year})` : '';
-  const venueText = publication.venue ? ` ${publication.venue}.` : '';
-  const noteText = publication.note ? ` ${publication.note}.` : '';
-  return `${authorText} ${yearText}. ${publication.title}.${venueText}${noteText}`.replace(/\s+/g, ' ').trim();
+function toInitials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => `${part.charAt(0).toUpperCase()}.`)
+    .join(' ');
+}
+
+function formatAuthorAcm(author: string) {
+  const cleanAuthor = stripBraces(author);
+  if (!cleanAuthor) {
+    return '';
+  }
+
+  if (cleanAuthor.includes(',')) {
+    const [familyRaw, givenRaw] = cleanAuthor.split(',');
+    const family = familyRaw.trim();
+    const initials = toInitials((givenRaw ?? '').trim());
+    return initials ? `${family}, ${initials}` : family;
+  }
+
+  const parts = cleanAuthor.split(/\s+/).filter(Boolean);
+  if (parts.length === 1) {
+    return parts[0];
+  }
+
+  const family = parts[parts.length - 1];
+  const given = parts.slice(0, -1).join(' ');
+  const initials = toInitials(given);
+  return initials ? `${family}, ${initials}` : family;
+}
+
+function formatAuthorListAcm(authors: string[]) {
+  const formattedAuthors = authors.map(formatAuthorAcm).filter(Boolean);
+
+  if (formattedAuthors.length <= 1) {
+    return formattedAuthors[0] ?? 'Unknown author';
+  }
+
+  if (formattedAuthors.length === 2) {
+    return `${formattedAuthors[0]} and ${formattedAuthors[1]}`;
+  }
+
+  return `${formattedAuthors.slice(0, -1).join(', ')}, and ${formattedAuthors[formattedAuthors.length - 1]}`;
+}
+
+export function formatPublicationCitationAcm(publication: Publication) {
+  const authorText = formatAuthorListAcm(publication.authors);
+  const yearText = publication.year ? `${publication.year}.` : 'n.d.';
+  const titleText = publication.title ? `${publication.title}.` : '';
+  const venuePrefix = publication.type === 'inproceedings' ? 'In ' : '';
+  const venueText = publication.venue ? `${venuePrefix}${publication.venue}.` : '';
+  const noteText = publication.note ? `${stripBraces(publication.note)}.` : '';
+  const doiText = publication.doi ? `DOI:${publication.doi}.` : '';
+
+  return [authorText, yearText, titleText, venueText, noteText, doiText].join(' ').replace(/\s+/g, ' ').trim();
 }

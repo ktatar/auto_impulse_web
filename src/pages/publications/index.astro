@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatPublicationCitation, groupPublications, loadPublications } from '../../lib/publications';
+import { formatPublicationCitationAcm, groupPublications, loadPublications } from '../../lib/publications';
 
 const publications = loadPublications();
 const groups = groupPublications(publications);
@@ -29,11 +29,7 @@ const groups = groupPublications(publications);
         <div class="publication-list">
           {group.items.map((publication) => (
             <article class="publication-item">
-              <div class="card-topline">
-                <p class="publication-title">{publication.title}</p>
-                <p class="publication-year">{publication.year ?? 'n.d.'}</p>
-              </div>
-              <p class="publication-citation">{formatPublicationCitation(publication)}</p>
+              <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
               {publication.url && (
                 <a class="card-link" href={publication.url} target="_blank" rel="noreferrer">
                   Open source
