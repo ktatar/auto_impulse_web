@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BaseLayout.astro
 title: Latent Timbre Synthesis
 description: Audio-based variational auto-encoders for music composition applications.
 date: 2020-06-01

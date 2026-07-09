@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BaseLayout.astro
 title: Plastic Biosphere
 description: A speculative audio work exploring synthetic ecologies and machine-made sound worlds.
 date: 2025-11-09

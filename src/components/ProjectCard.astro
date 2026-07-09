@@ -10,7 +10,6 @@ const href = `/projects/${project.slug}`;
 ---
 <article class="card" data-tags={project.data.tags.map((tag) => tag.toLowerCase()).join('|')}>
   <div class="card-topline">
-    <p class="card-status">{project.data.status}</p>
     <p class="card-date">{new Date(project.data.date).getFullYear()}</p>
   </div>
   <h3 class="card-title">
@@ -21,7 +20,6 @@ const href = `/projects/${project.slug}`;
     {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
   </div>
   <div class="card-footer">
-    <span class="meta">{project.data.status === 'current' ? 'Current project' : 'Archive project'}</span>
-    <a class="card-link" href={href}>Open project</a>
+    <a class="card-link" href={href}>Open Project</a>
   </div>
 </article>

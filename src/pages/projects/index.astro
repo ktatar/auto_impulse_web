@@ -3,7 +3,7 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { collectProjectTags, loadProjects, splitProjects } from '../../lib/projects';
 
-const projects = loadProjects();
+const projects = await loadProjects();
 const sections = splitProjects(projects);
 const tags = collectProjectTags(projects);
 ---
@@ -35,7 +35,7 @@ const tags = collectProjectTags(projects);
   <section class="section" data-project-section="current">
     <div class="section-header">
       <h2 class="section-heading">Current projects</h2>
-      <p class="section-copy">Ongoing work in progress.</p>
+      <p>Ongoing work in progress.</p>
     </div>
     <div class="project-grid" data-project-grid>
       {sections.current.map((project) => <ProjectCard project={project} />)}
@@ -46,7 +46,7 @@ const tags = collectProjectTags(projects);
   <section class="section" data-project-section="archive">
     <div class="section-header">
       <h2 class="section-heading">Archive</h2>
-      <p class="section-copy">Completed or previous projects.</p>
+      <p>Completed or previous projects.</p>
     </div>
     <div class="project-grid" data-project-grid>
       {sections.archive.map((project) => <ProjectCard project={project} />)}

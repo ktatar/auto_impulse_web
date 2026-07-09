@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BaseLayout.astro
 title: Coding the Latent
 description: A performance project that turns latent-space navigation into musical material.
 date: 2026-03-18

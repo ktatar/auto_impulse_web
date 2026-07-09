@@ -1,47 +1,33 @@
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
-
-import matter from 'gray-matter';
+import { getCollection } from 'astro:content';
 
 export type ProjectEntry = {
   slug: string;
   data: {
     title: string;
     description: string;
-    date: string;
+    date: Date;
     status: 'current' | 'archive';
     tags: string[];
   };
 };
 
-function parseProject(fileName: string) {
-  const projectsDir = join(process.cwd(), 'src', 'pages', 'projects');
-  const source = readFileSync(join(projectsDir, fileName), 'utf-8');
-  const { data } = matter(source);
-  const slug = fileName.replace(/\.md$/i, '');
-
-  return {
-    slug,
+export async function loadProjects() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    slug: project.id,
     data: {
-      title: String(data.title ?? slug),
-      description: String(data.description ?? ''),
-      date: String(data.date ?? '1970-01-01'),
-      status: data.status === 'archive' ? 'archive' : 'current',
-      tags: Array.isArray(data.tags) ? data.tags.map((tag) => String(tag)) : []
+      title: project.data.title,
+      description: project.data.description,
+      date: project.data.date,
+      status: project.data.status,
+      tags: project.data.tags
     }
-  } satisfies ProjectEntry;
-}
-
-export function loadProjects() {
-  const projectsDir = join(process.cwd(), 'src', 'pages', 'projects');
-  return readdirSync(projectsDir)
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map(parseProject);
+  })) satisfies ProjectEntry[];
 }
 
 export function sortProjects(entries: ProjectEntry[]) {
   return [...entries].sort((left, right) => {
-    const timeDifference = new Date(right.data.date).getTime() - new Date(left.data.date).getTime();
+    const timeDifference = right.data.date.getTime() - left.data.date.getTime();
     if (timeDifference !== 0) {
       return timeDifference;
     }

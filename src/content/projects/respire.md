@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BaseLayout.astro
 title: Respire
 description: A virtual reality art piece with a musical agent guided by respiration.
 date: 2019-02-01

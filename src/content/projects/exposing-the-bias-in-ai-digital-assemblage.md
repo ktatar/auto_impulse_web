@@ -1,5 +1,5 @@
 ---
-title: Exposing the Bias in AI: Digital Assemblage
+title: "Exposing the Bias in AI: Digital Assemblage"
 description: Ongoing research on how machine learning systems encode aesthetic and social bias.
 date: 2026-05-01
 status: current

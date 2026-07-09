@@ -1,44 +1,57 @@
 ---
+import { getCollection } from 'astro:content';
 import ProjectCard from '../components/ProjectCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { loadPublications, formatPublicationCitationAcm } from '../lib/publications';
 import { loadProjects, sortProjects } from '../lib/projects';
+import { loadLatestNews } from '../lib/news';
 
-const projects = sortProjects(loadProjects());
+const pages = await getCollection('pages');
+const homePage = pages.find((page) => page.slug === 'home');
+const projects = sortProjects(await loadProjects());
 const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
 const recentPublications = loadPublications().slice(0, 4);
+const latestNews = await loadLatestNews(4);
+
+function formatNewsDate(date: string | Date) {
+  const parsed = date instanceof Date ? date : new Date(date);
+  return Number.isNaN(parsed.getTime())
+    ? date
+    : parsed.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' });
+}
 ---
-<BaseLayout title="Kıvanç Tatar | News" description="New work, exhibitions, publications, and ongoing research.">
+<BaseLayout
+  title={homePage?.data.title ?? 'Kıvanç Tatar | News'}
+  description={homePage?.data.description ?? 'New work, exhibitions, publications, and ongoing research.'}
+>
   <div class="home-page">
   <section class="hero">
     <div class="kicker"></div>
-    <div class="hero-grid">
-      <div class="hero-panel prose">
-        <h1>News</h1>
-        <p>
-          I work across AI music, live performance, interactive arts, and embodied computing. This rebuild keeps the
-          site content-first: the pages, project cards, and publication list are all generated from Markdown and
-          BibTeX.
-        </p>
-        <p>
-          Use the Projects page to browse current work and the archive, or open Publications for the bibliography-backed
-          publication list.
-        </p>
+    <div class="hero-panel">
+      <h1>News</h1>
+      <div class="news-list">
+        {latestNews.map((item) => (
+          <article class="news-item">
+            <p class="news-line">
+              <span class="news-date">{formatNewsDate(item.data.date)}</span>
+              <span class="news-separator">|</span>
+              <span class="news-title">
+                {item.data.link ? (
+                  <a class="news-title-link" href={item.data.link} target="_blank" rel="noreferrer">{item.data.title}</a>
+                ) : (
+                  item.data.title
+                )}
+              </span>
+              {item.summary && (
+                <>
+                  <span class="news-separator">-</span>
+                  <span class="news-summary">{item.summary}</span>
+                </>
+              )}
+            </p>
+          </article>
+        ))}
       </div>
-      <aside class="hero-panel">
-        <p class="section-copy">The site structure mirrors the original Cargo Collective pages while making projects and publications easier to maintain in GitHub.</p>
-        <p class="section-copy">Projects are grouped into current and archive sections. Publications are read from a single BibTeX source file.</p>
-        <div class="content-list">
-          <div>
-            <p class="meta">Current projects</p>
-            <p class="section-heading" style="font-size: 1.8rem;">{currentProjects.length}</p>
-          </div>
-          <div>
-            <p class="meta">Publication entries</p>
-            <p class="section-heading" style="font-size: 1.8rem;">{recentPublications.length} featured</p>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 
