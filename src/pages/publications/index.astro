@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatPublicationCitation, groupPublications, loadPublications } from '../../lib/publications';
+
+const publications = loadPublications();
+const groups = groupPublications(publications);
+---
+<BaseLayout title="Publications | Kıvanç Tatar" description="Publications rendered from a BibTeX source file.">
+  <section class="hero" style="padding-bottom: 1.5rem;">
+    <div class="kicker">Publications</div>
+    <div class="hero-grid">
+      <div class="hero-panel prose">
+        <h1>Publications</h1>
+        <p>
+          This page is generated directly from <strong>src/data/publications.bib</strong>, so citations can stay in
+          a single source of truth and be grouped automatically.
+        </p>
+      </div>
+      <aside class="hero-panel">
+        <p class="section-copy">The loader groups entries by their BibTeX <strong>group</strong> field, and falls back to the entry type when needed.</p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="publication-list">
+    {groups.map((group) => (
+      <section class="section publication-group">
+        <h2>{group.label}</h2>
+        <div class="publication-list">
+          {group.items.map((publication) => (
+            <article class="publication-item">
+              <div class="card-topline">
+                <p class="publication-title">{publication.title}</p>
+                <p class="publication-year">{publication.year ?? 'n.d.'}</p>
+              </div>
+              <p class="publication-citation">{formatPublicationCitation(publication)}</p>
+              {publication.url && (
+                <a class="card-link" href={publication.url} target="_blank" rel="noreferrer">
+                  Open source
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

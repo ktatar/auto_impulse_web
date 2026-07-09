@@ -1,0 +1,27 @@
+---
+import type { ProjectEntry } from '../lib/projects';
+
+interface Props {
+  project: ProjectEntry;
+}
+
+const { project } = Astro.props as Props;
+const href = `/projects/${project.slug}`;
+---
+<article class="card" data-tags={project.data.tags.map((tag) => tag.toLowerCase()).join('|')}>
+  <div class="card-topline">
+    <p class="card-status">{project.data.status}</p>
+    <p class="card-date">{new Date(project.data.date).getFullYear()}</p>
+  </div>
+  <h3 class="card-title">
+    <a href={href}>{project.data.title}</a>
+  </h3>
+  <p class="card-summary">{project.data.description}</p>
+  <div class="tag-row" aria-label="Project tags">
+    {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
+  </div>
+  <div class="card-footer">
+    <span class="meta">{project.data.status === 'current' ? 'Current project' : 'Archive project'}</span>
+    <a class="card-link" href={href}>Open project</a>
+  </div>
+</article>

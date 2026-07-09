@@ -1,0 +1,96 @@
+---
+import ProjectCard from '../../components/ProjectCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { collectProjectTags, loadProjects, splitProjects } from '../../lib/projects';
+
+const projects = loadProjects();
+const sections = splitProjects(projects);
+const tags = collectProjectTags(projects);
+---
+<BaseLayout title="Projects | Kıvanç Tatar" description="Current projects and archive projects filtered by tag.">
+  <section class="hero" style="padding-bottom: 1.5rem;">
+    <div class="kicker">Projects</div>
+    <div class="hero-grid">
+      <div class="hero-panel prose">
+        <h1>Projects</h1>
+        <p>
+          The list defaults to chronological order. Pick one tag to filter the project cards across both the current
+          and archive sections.
+        </p>
+      </div>
+      <aside class="hero-panel">
+        <p class="meta">Filter by tag</p>
+        <div class="filter-row" data-tag-filter>
+          <button class="filter-chip" type="button" data-filter-tag="all" aria-pressed="true">All</button>
+          {tags.map((tag) => (
+            <button class="filter-chip" type="button" data-filter-tag={tag.toLowerCase()} aria-pressed="false">
+              {tag}
+            </button>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" data-project-section="current">
+    <div class="section-header">
+      <h2 class="section-heading">Current projects</h2>
+      <p class="section-copy">Ongoing work in progress.</p>
+    </div>
+    <div class="project-grid" data-project-grid>
+      {sections.current.map((project) => <ProjectCard project={project} />)}
+    </div>
+    <p class="empty-state" hidden data-empty-state="current">No current projects match this tag.</p>
+  </section>
+
+  <section class="section" data-project-section="archive">
+    <div class="section-header">
+      <h2 class="section-heading">Archive</h2>
+      <p class="section-copy">Completed or previous projects.</p>
+    </div>
+    <div class="project-grid" data-project-grid>
+      {sections.archive.map((project) => <ProjectCard project={project} />)}
+    </div>
+    <p class="empty-state" hidden data-empty-state="archive">No archive projects match this tag.</p>
+  </section>
+
+  <script type="module">
+    const filterButtons = Array.from(document.querySelectorAll('[data-filter-tag]'));
+    const sections = Array.from(document.querySelectorAll('[data-project-section]'));
+
+    function applyFilter(activeTag) {
+      filterButtons.forEach((button) => {
+        button.setAttribute('aria-pressed', button.dataset.filterTag === activeTag ? 'true' : 'false');
+      });
+
+      sections.forEach((section) => {
+        const cards = Array.from(section.querySelectorAll('[data-tags]'));
+        const grid = section.querySelector('[data-project-grid]');
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const tags = (card.dataset.tags || '').split('|').filter(Boolean);
+          const matches = activeTag === 'all' || tags.includes(activeTag);
+          card.hidden = !matches;
+          if (matches) {
+            visibleCount += 1;
+          }
+        });
+
+        const emptyState = section.querySelector('[data-empty-state]');
+        if (emptyState) {
+          emptyState.hidden = visibleCount !== 0;
+        }
+        if (grid) {
+          grid.hidden = visibleCount === 0;
+        }
+      });
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        applyFilter(button.dataset.filterTag || 'all');
+      });
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,68 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { loadPublications, formatPublicationCitation } from '../lib/publications';
+import { loadProjects, sortProjects } from '../lib/projects';
+
+const projects = sortProjects(loadProjects());
+const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
+const recentPublications = loadPublications().slice(0, 4);
+---
+<BaseLayout title="Kıvanç Tatar | News" description="New work, exhibitions, publications, and ongoing research.">
+  <section class="hero">
+    <div class="kicker">Markdown-first Astro rebuild</div>
+    <div class="hero-grid">
+      <div class="hero-panel prose">
+        <h1>News</h1>
+        <p>
+          I work across AI music, live performance, interactive arts, and embodied computing. This rebuild keeps the
+          site content-first: the pages, project cards, and publication list are all generated from Markdown and
+          BibTeX.
+        </p>
+        <p>
+          Use the Projects page to browse current work and the archive, or open Publications for the bibliography-backed
+          publication list.
+        </p>
+      </div>
+      <aside class="hero-panel">
+        <p class="section-copy">The site structure mirrors the original Cargo Collective pages while making projects and publications easier to maintain in GitHub.</p>
+        <p class="section-copy">Projects are grouped into current and archive sections. Publications are read from a single BibTeX source file.</p>
+        <div class="content-list">
+          <div>
+            <p class="meta">Current projects</p>
+            <p class="section-heading" style="font-size: 1.8rem;">{currentProjects.length}</p>
+          </div>
+          <div>
+            <p class="meta">Publication entries</p>
+            <p class="section-heading" style="font-size: 1.8rem;">{recentPublications.length} featured</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-heading">Selected current projects</h2>
+      <a class="inline-link" href="/projects">View all projects</a>
+    </div>
+    <div class="project-grid">
+      {currentProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-heading">Recent publications</h2>
+      <a class="inline-link" href="/publications">View bibliography</a>
+    </div>
+    <div class="publication-list">
+      {recentPublications.map((publication) => (
+        <article class="publication-item">
+          <p class="publication-title">{publication.title}</p>
+          <p class="publication-citation">{formatPublicationCitation(publication)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
