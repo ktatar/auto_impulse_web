@@ -19,6 +19,10 @@ function formatNewsDate(date: string | Date) {
     ? date
     : parsed.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' });
 }
+
+function isExternalUrl(url: string) {
+  return /^https?:\/\//i.test(url);
+}
 ---
 <BaseLayout
   title={homePage?.data.title ?? 'Kıvanç Tatar | News'}
@@ -32,23 +36,32 @@ function formatNewsDate(date: string | Date) {
       <div class="news-list">
         {latestNews.map((item) => (
           <article class="news-item">
-            <p class="news-line">
+            <div class="news-line">
               <span class="news-date">{formatNewsDate(item.data.date)}</span>
               <span class="news-separator">|</span>
               <span class="news-title">
                 {item.data.link ? (
-                  <a class="news-title-link" href={item.data.link} target="_blank" rel="noreferrer">{item.data.title}</a>
+                  <a
+                    class="news-title-link"
+                    href={item.data.link}
+                    target={isExternalUrl(item.data.link) ? '_blank' : undefined}
+                    rel={isExternalUrl(item.data.link) ? 'noopener noreferrer' : undefined}
+                  >
+                    {item.data.title}
+                  </a>
                 ) : (
                   item.data.title
                 )}
               </span>
-              {item.summary && (
+              {item.hasBody && (
                 <>
-                  <span class="news-separator">-</span>
-                  <span class="news-summary">{item.summary}</span>
+                  <span class="news-separator"></span>
+                  <div class="news-summary">
+                    <item.Content />
+                  </div>
                 </>
               )}
-            </p>
+            </div>
           </article>
         ))}
       </div>

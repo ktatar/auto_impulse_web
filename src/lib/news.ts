@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export type NewsEntry = {
   slug: string;
@@ -7,16 +7,9 @@ export type NewsEntry = {
     date: Date;
     link?: string;
   };
-  summary: string;
+  hasBody: boolean;
+  Content: any;
 };
-
-function stripMarkdown(value: string) {
-  return value
-    .replace(/\[(.*?)\]\((.*?)\)/g, '$1')
-    .replace(/[>*_`#~-]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
 
 function sortNews(entries: NewsEntry[]) {
   return [...entries].sort((left, right) => {
@@ -31,17 +24,25 @@ function sortNews(entries: NewsEntry[]) {
 
 export async function loadNews() {
   const entries = await getCollection('news');
-  return sortNews(
-    entries.map((entry) => ({
-      slug: entry.slug,
-      data: {
-        title: entry.data.title,
-        date: entry.data.date,
-        link: entry.data.link
-      },
-      summary: stripMarkdown(entry.body)
-    }))
+
+  const hydrated = await Promise.all(
+    entries.map(async (entry) => {
+      const { Content } = await render(entry);
+
+      return {
+        slug: entry.slug,
+        data: {
+          title: entry.data.title,
+          date: entry.data.date,
+          link: entry.data.link
+        },
+        hasBody: entry.body.trim().length > 0,
+        Content
+      };
+    })
   );
+
+  return sortNews(hydrated);
 }
 
 export async function loadLatestNews(limit = 4) {
