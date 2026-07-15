@@ -462,6 +462,10 @@ main {
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
+.filter-chip:hover {
+  color: var(--accent);
+}
+
 .filter-chip[aria-pressed='true'] {
   background: var(--accent);
   color: #111111;
@@ -480,8 +484,8 @@ main {
 .card-link,
 .inline-link,
 .back-link {
-  font-family: 'Templo Fino', 'Courier New', monospace;
-  font-size: 0.86rem;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
   color: var(--accent);
   text-transform: uppercase;
 }
