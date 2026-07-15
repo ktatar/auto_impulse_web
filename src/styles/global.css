@@ -320,18 +320,6 @@ main {
   color: var(--accent-cyan);
 }
 
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 1rem;
-  color: var(--accent-cyan);
-  font-family: 'Templo Fino', 'Courier New', monospace;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-}
-
 .section {
   padding: 1.2rem;
 }
