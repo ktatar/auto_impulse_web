@@ -9,6 +9,28 @@ npm install
 npm run dev
 ```
 
+## Podman development container
+
+Use the included container files to run the Astro dev server in Podman with live reload.
+
+```bash
+podman compose up --build
+```
+
+Then open:
+
+```text
+http://localhost:4321
+```
+
+Stop the stack:
+
+```bash
+podman compose down
+```
+
+If file watching is unreliable on your system, keep `CHOKIDAR_USEPOLLING=true` enabled in `compose.yml`.
+
 ## Build
 
 ```bash

@@ -266,7 +266,7 @@ main {
 }
 
 .news-date {
-  font-family: 'Templo Gruesa', 'Courier New', monospace;
+  font-family: 'Karma Future', 'Courier New', monospace;
   font-size: 0.75rem;
   color: var(--muted);
   text-transform: uppercase;
@@ -411,7 +411,7 @@ main {
 .card-date,
 .card-status,
 .publication-year {
-  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-family: 'Karma Future', 'Courier New', monospace;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -440,12 +440,13 @@ main {
   border: 2px solid var(--border);
   border-radius: 0;
   padding: 0 0.7rem;
-  font-family: 'Templo Fino', 'Courier New', monospace;
+  font-family: 'Karma Suture', 'Courier New', monospace;
   font-size: 0.76rem;
   line-height: 1;
   color: var(--muted);
   background: var(--surface-strong);
   text-transform: uppercase;
+  height: 1.45rem;
 }
 
 .tag {
