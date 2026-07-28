@@ -89,7 +89,7 @@
   --shadow: 8px 8px 0 rgba(17, 17, 17, 0.26);
   --radius: 0;
   --radius-sm: 0;
-  --page-width: 1120px;
+  --page-width: 1280px;
 }
 
 * {
@@ -529,6 +529,14 @@ main {
   max-width: 72ch;
 }
 
+.content-card.prose {
+  max-width: none;
+}
+
+.project-detail {
+  margin-top: 4rem;
+}
+
 .prose h1,
 .prose h2,
 .prose h3 {
@@ -628,6 +636,10 @@ main {
 
   .hero {
     padding-top: 2.6rem;
+  }
+
+  .project-detail {
+    margin-top: 2.6rem;
   }
 
   .section,

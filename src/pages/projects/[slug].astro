@@ -18,7 +18,7 @@ const { Content } = await render(project);
 const year = new Date(project.data.date).getFullYear();
 ---
 <BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description}>
-  <article class="section content-card prose">
+  <article class="section content-card prose project-detail">
     <div class="card-topline">
       <p class="card-date">{year}</p>
     </div>
