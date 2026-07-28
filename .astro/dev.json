@@ -7,9 +7,9 @@
 			"http://localhost:4321/"
 		],
 		"network": [
-			"http://10.89.0.2:4321/"
+			"http://10.89.0.11:4321/"
 		]
 	},
 	"background": false,
-	"startedAt": "2026-07-28T15:16:07.040Z"
+	"startedAt": "2026-07-28T16:00:11.424Z"
 }
