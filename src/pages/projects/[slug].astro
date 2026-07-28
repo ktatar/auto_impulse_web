@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slugifyTag } from '../../lib/projects';
 
 type ProjectEntry = CollectionEntry<'projects'>;
 
@@ -24,7 +25,9 @@ const year = new Date(project.data.date).getFullYear();
     <h1 class="entry-title">{project.data.title}</h1>
     <p class="page-intro">{project.data.description}</p>
     <div class="tag-row" aria-label="Project tags">
-      {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
+      {project.data.tags.map((tag) => (
+        <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
+      ))}
     </div>
     <Content />
     <div class="card-footer">

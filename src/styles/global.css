@@ -561,13 +561,21 @@ main {
   margin: 0 0 1rem;
 }
 
-.prose a {
+.content-card.prose .entry-title + .page-intro {
+  margin-top: 1rem;
+}
+
+.content-card.prose .tag-row {
+  margin-bottom: 1rem;
+}
+
+.prose a:not(.tag-link) {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
 
-.prose a:hover {
+.prose a:not(.tag-link):hover {
   color: var(--accent-cyan);
 }
 
