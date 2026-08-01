@@ -565,9 +565,10 @@ main {
 
 .prose h1,
 .prose h2,
-.prose h3 {
+.prose h3,
+.prose h4,
+.prose h5 {
   font-family: 'Karma Suture', 'Courier New', monospace;
-  font-size: 24pt;
   letter-spacing: normal;
   margin: 0;
   text-transform: none;
@@ -579,12 +580,22 @@ main {
 
 .prose h2 {
   margin-top: 2rem;
-  font-size: 24pt;
+  font-size: 20pt;
 }
 
 .prose h3 {
   margin-top: 1.5rem;
-  font-size: 24pt;
+  font-size: 16pt;
+}
+
+.prose h4 {
+  margin-top: 1.25rem;
+  font-size: 13pt;
+}
+
+.prose h5 {
+  margin-top: 1rem;
+  font-size: 11pt;
 }
 
 .prose p,

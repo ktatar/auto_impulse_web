@@ -2,7 +2,7 @@
 title: Plastic Biosphere
 description: A speculative audio work exploring synthetic ecologies and machine-made sound worlds.
 date: 2025-11-09
-status: current
+status: archive
 tags:
   - Musical AI
   - Video Art

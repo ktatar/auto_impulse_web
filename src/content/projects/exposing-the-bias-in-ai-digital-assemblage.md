@@ -4,8 +4,9 @@ description: An audiovisual performance exposing how AI systems encode gendered 
 date: 2026-05-01
 status: current
 tags:
-  - Audiovisual
   - Live Performance
+  - Audiovisual
+
 ---
 
 *What is human?
@@ -16,7 +17,7 @@ tags:
 
 *Exposing the Bias in Artificial Intelligence: Digital Assemblage* continues the series with an audiovisual exposition of machine generated associations of human qualities. The live performance reveals multimodal associations within text-to-image and text-to-voice models where the human profile is reduced to its superficial material: a face and a voice. The human profiles are constructed through embedded ontologies, taxonomies, and categories within the text, voice, and image encoders in AI pipelines. The linguistic associations of geographic locations, gendered personality qualities, all brought together as profile images and at times talking faces with custom generated voices.
 
-<img src="/exposing-da.png" alt="Exposing the Bias in AI - Digital Assemblage" width="800" style="display:block; margin:0 auto; max-width:100%; height:auto;" />
+<img src="/content-images/projects/exposing-the-bias-in-ai-digital-assemblage/exposing-da.png" alt="Exposing the Bias in AI - Digital Assemblage" width="800" style="display:block; margin:0 auto; max-width:800px; height:auto;" />
 <br>
 
 The associations of gendered adjectives with demographic categories constructs visual and auditory qualities of a human profile, through associations in text encoders and representations of those associations in models for voice and image generation. All comes together to expose agreements and contradictions in how different AI systems in different modalities encode the idea of a person.
