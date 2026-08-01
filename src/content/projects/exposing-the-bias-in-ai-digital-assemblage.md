@@ -27,3 +27,7 @@ The text and gendered adjectives for human profiles are aggregated by prompting 
 
 The demographic categories, combined with gendered adjectives established a structured prompt for generating human portraits with Stable Diffusion 2.0. One example from the structured prompts were “
 a [adjective] person from [continent], full face, looking at the camera.”. The audiovisual performance first reveals the machine generated ontology and its associated portraits, then continues to lay out further machinistic details such as exact prompts, models, hyperparameters, sampling methods that were used to generate each profile image.
+
+## Acknowledgements
+
+This work was partially supported by the Wallenberg AI, Autonomous Systems and Software Program—Humanities and Society (WASP-HS) funded by the Marcus and Amalia Wallenberg Foundation, and the Swedish Research Council (VR).
