@@ -606,6 +606,28 @@ main {
   margin: 0 0 1rem;
 }
 
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.prose th {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  background: transparent;
+}
+
 .content-card.prose .entry-title + .page-intro {
   margin-top: 1rem;
 }

@@ -13,7 +13,7 @@ tags:
 | --- | --- |
 | Mattia Martelli | Chalmers University of Technology, Sweden; and Polytechnic Institute of Milan, Italy |
 | Jiafeng Chen | Northeastern University, USA |
-| Kıvanç Tatar | Chalmers University of Technology |
+| Kıvanç Tatar | Chalmers University of Technology, Sweden |
 | Victor Zappi | Northeastern University, USA |
 
 ## Description
