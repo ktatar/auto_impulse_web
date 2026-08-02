@@ -15,23 +15,18 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
     ))}
 
     <section class="hero" style="padding-bottom: 1.5rem;">
-      <div class="hero-grid">
-        <div class="hero-panel prose">
-          <h1>Projects</h1>
-          <p class="card-summary">
-            The list defaults to chronological order. Pick one tag to filter the project cards across both the current
-            and archive sections.
-          </p>
+      <div class="hero-panel prose project-hero-panel">
+        <h1>Projects</h1>
+        <p class="card-summary">
+          The list defaults to chronological order. Pick one tag to filter the project cards across both the current
+          and archive sections.
+        </p>
+        <div class="filter-row project-filter-row" data-tag-filter>
+          <label class="filter-chip" for="filter-all">All</label>
+          {tags.map((tag) => (
+            <label class="filter-chip" for={`filter-${tag.slug}`}>{tag.label}</label>
+          ))}
         </div>
-        <aside class="hero-panel">
-          <p class="meta">Filter by tag</p>
-          <div class="filter-row" data-tag-filter>
-            <label class="filter-chip" for="filter-all">All</label>
-            {tags.map((tag) => (
-              <label class="filter-chip" for={`filter-${tag.slug}`}>{tag.label}</label>
-            ))}
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -61,6 +56,14 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
   </div>
 
   <style is:global>
+    .project-hero-panel {
+      max-width: none;
+    }
+
+    .project-filter-row {
+      margin-top: 1rem;
+    }
+
     .filter-toggle {
       position: absolute;
       width: 1px;
@@ -74,7 +77,7 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
     }
 
     .filter-toggle:checked + .filter-chip {
-      background: var(--accent);
+      background: var(--accent-yellow);
       color: #111111;
       border-color: var(--border-strong);
       box-shadow: 3px 3px 0 var(--accent-yellow);
@@ -124,6 +127,7 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
   <script type="module">
     function setupProjectFilters() {
       const filterInputs = Array.from(document.querySelectorAll('input[name="project-filter"]'));
+      const filterChips = Array.from(document.querySelectorAll('.filter-chip'));
       const cards = Array.from(document.querySelectorAll('[data-project-section] .card'));
       const searchParams = new URLSearchParams(window.location.search);
       const initialTag = searchParams.get('tag') || 'all';
@@ -207,6 +211,14 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
       function applyFilter() {
         const activeTag = getActiveTag();
         const beforeRects = new Map();
+
+        filterChips.forEach((chip) => {
+          if (!(chip instanceof HTMLLabelElement)) {
+            return;
+          }
+
+          chip.setAttribute('aria-pressed', chip.htmlFor === `filter-${activeTag}` ? 'true' : 'false');
+        });
 
         cards.forEach((card) => {
           const shouldShow = matchesTag(card, activeTag);

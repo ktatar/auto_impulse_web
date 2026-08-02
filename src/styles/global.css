@@ -227,15 +227,18 @@ main {
 .entry-title {
   margin: 0;
   font-family: 'Karma Suture', 'Courier New', monospace;
-  font-size: 24pt;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
 }
 
+.hero h1,
+.entry-title {
+  font-size: 24pt;
+}
+
 .hero h1 {
   max-width: 14ch;
-  font-size: 24pt;
 }
 
 .hero p,
@@ -292,11 +295,12 @@ main {
 }
 
 .news-date {
-  font-family: 'Karma Future', 'Courier New', monospace;
-  font-size: 0.75rem;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.72rem;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 
 .news-line {
@@ -365,7 +369,7 @@ main {
 }
 
 .section-heading {
-  font-size: 24pt;
+  font-size: 20pt;
 }
 
 .meta {
@@ -416,7 +420,7 @@ main {
 .publication-title {
   margin: 0;
   font-family: 'Karma Suture', 'Courier New', monospace;
-  font-size: 24pt;
+  font-size: 18pt;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
@@ -425,8 +429,8 @@ main {
 .card-date,
 .card-status,
 .publication-year {
-  font-family: 'Karma Future', 'Courier New', monospace;
-  font-size: 0.78rem;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -481,7 +485,7 @@ main {
 }
 
 .filter-chip[aria-pressed='true'] {
-  background: var(--accent);
+  background: var(--accent-yellow);
   color: #111111;
   border-color: var(--border-strong);
   box-shadow: 3px 3px 0 var(--accent-yellow);
@@ -576,6 +580,10 @@ main {
 
 .prose h1 {
   font-size: 24pt;
+}
+
+.hero-panel.prose h1 {
+  font-size: 28pt;
 }
 
 .prose h2 {
