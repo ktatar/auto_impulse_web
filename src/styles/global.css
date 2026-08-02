@@ -106,8 +106,8 @@ body {
   color: var(--text);
   background: var(--bg);
   font-family: 'Space Mono', 'Courier New', monospace;
-  font-size: 0.82rem;
-  line-height: 1.3;
+  font-size: 1.0rem;
+  line-height: 1.5;
   text-rendering: optimizeSpeed;
 }
 
@@ -601,8 +601,8 @@ main {
 .prose p,
 .prose ul,
 .prose ol {
-  font-size: 0.82rem;
-  line-height: 1.3;
+  font-size: 1.0rem;
+  line-height: 1.5;
   margin: 0 0 1rem;
 }
 

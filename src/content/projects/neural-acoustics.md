@@ -9,6 +9,13 @@ tags:
   - Research
 ---
 
+| Author | Affiliation |
+| --- | --- |
+| Mattia Martelli | Chalmers University of Technology, Sweden; and Polytechnic Institute of Milan, Italy |
+| Jiafeng Chen | Northeastern University, USA |
+| Kıvanç Tatar | Chalmers University of Technology |
+| Victor Zappi | Northeastern University, USA |
+
 ## Description
 
 <img src="/content-images/projects/neural-acoustics/2024-aimc-neuralacoustics.jpg" alt="Neural Acoustics" style="display:block; margin:0 auto; max-width:500px; height:auto;" />
