@@ -1,0 +1,25 @@
+---
+import type { ProjectEntry } from '../lib/projects';
+import { slugifyTag } from '../lib/projects';
+
+interface Props {
+  project: ProjectEntry;
+}
+
+const { project } = Astro.props as Props;
+const href = `/projects/${project.slug}`;
+const tagClasses = project.data.tags.map((tag) => `tag-${slugifyTag(tag)}`).join(' ');
+---
+<article class={`card ${tagClasses}`} data-tags={project.data.tags.map((tag) => tag.toLowerCase()).join('|')}>
+  <a class="card-surface-link" href={href} aria-label={`Open project ${project.data.title}`}></a>
+  <div class="card-topline">
+    <p class="card-date">{new Date(project.data.date).getFullYear()}</p>
+  </div>
+  <h3 class="card-title">{project.data.title}</h3>
+  <p class="card-summary">{project.data.description}</p>
+  <div class="tag-row" aria-label="Project tags">
+    {project.data.tags.map((tag) => (
+      <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
+    ))}
+  </div>
+</article>

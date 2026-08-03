@@ -1,0 +1,37 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slugifyTag } from '../../lib/projects';
+
+type ProjectEntry = CollectionEntry<'projects'>;
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props as { project: ProjectEntry };
+const { Content } = await render(project);
+const year = new Date(project.data.date).getFullYear();
+---
+<BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description}>
+  <article class="section content-card prose project-detail">
+    <div class="card-topline">
+      <p class="card-date">{year}</p>
+    </div>
+    <h1 class="entry-title">{project.data.title}</h1>
+    <p class="page-intro">{project.data.description}</p>
+    <div class="tag-row" aria-label="Project tags">
+      {project.data.tags.map((tag) => (
+        <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
+      ))}
+    </div>
+    <Content />
+    <div class="card-footer">
+      <a class="card-link" href="/projects">Back to projects</a>
+    </div>
+  </article>
+</BaseLayout>

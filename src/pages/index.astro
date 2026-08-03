@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from '../components/ProjectCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { loadPublications, formatPublicationCitationAcm } from '../lib/publications';
+import { loadProjects, sortProjects } from '../lib/projects';
+import { loadLatestNews } from '../lib/news';
+
+const pages = await getCollection('pages');
+const homePage = pages.find((page) => page.slug === 'home');
+const projects = sortProjects(await loadProjects());
+const currentProjects = projects.filter((project) => project.data.status === 'current').slice(0, 4);
+const recentPublications = loadPublications().slice(0, 4);
+const latestNews = await loadLatestNews(4);
+
+function formatNewsDate(date: string | Date) {
+  const parsed = date instanceof Date ? date : new Date(date);
+  return Number.isNaN(parsed.getTime())
+    ? date
+    : parsed.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' });
+}
+
+function isExternalUrl(url: string) {
+  return /^https?:\/\//i.test(url);
+}
+---
+<BaseLayout
+  title={homePage?.data.title ?? 'Kıvanç Tatar | News'}
+  description={homePage?.data.description ?? 'New artworks, performances, exhibitions, publications, and ongoing research.'}
+>
+  <div class="home-page">
+  <section class="hero">
+    <div class="hero-panel">
+      <h1>News</h1>
+      <div class="news-list">
+        {latestNews.map((item) => (
+          <article class="news-item">
+            <div class="news-line">
+              <span class="news-date">{formatNewsDate(item.data.date)}</span>
+              <span class="news-separator">|</span>
+              <span class="news-title">
+                {item.data.link ? (
+                  <a
+                    class="news-title-link"
+                    href={item.data.link}
+                    target={isExternalUrl(item.data.link) ? '_blank' : undefined}
+                    rel={isExternalUrl(item.data.link) ? 'noopener noreferrer' : undefined}
+                  >
+                    {item.data.title}
+                  </a>
+                ) : (
+                  item.data.title
+                )}
+              </span>
+              {item.hasBody && (
+                <>
+                  <span class="news-separator"></span>
+                  <div class="news-summary">
+                    <item.Content />
+                  </div>
+                </>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-heading">Selected current projects</h2>
+      <a class="inline-link" href="/projects">View all projects</a>
+    </div>
+    <div class="project-grid">
+      {currentProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-heading">Recent publications</h2>
+      <a class="inline-link" href="/publications">View bibliography</a>
+    </div>
+    <div class="publication-list">
+      {recentPublications.map((publication) => (
+        <article class="publication-item">
+          <p class="publication-title home-publication-title">{publication.title}</p>
+          <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  </div>
+</BaseLayout>

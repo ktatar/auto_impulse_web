@@ -1,0 +1,868 @@
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+
+@font-face {
+  font-family: 'Karma Future';
+  src: url('../fonts/karma/Karma Future.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karma Suture';
+  src: url('../fonts/karma/Karma Suture.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Templo Fino';
+  src: url('../fonts/templo/TEMPLOF_.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Templo Sombra';
+  src: url('../fonts/templo/TEMPLOS_.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Templo Kolegio';
+  src: url('../fonts/templo/TEMPLOK_.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Templo Ligero';
+  src: url('../fonts/templo/TEMPLOL_.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Templo Gruesa';
+  src: url('../fonts/templo/TEMPLOG_.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Templo Gordo';
+  src: url('../fonts/templo/TEMPLOGO.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Blox Brk';
+  src: url('../fonts/blox-brk/Blox2.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+}
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --border: #2a2a2a;
+  --border-strong: #111111;
+  --text: #1a1a1a;
+  --muted: #4b4b4b;
+  --accent: #ff2fb9;
+  --accent-cyan: #00e5d4;
+  --accent-yellow: #ffe24a;
+  --accent-soft: #ffe8f8;
+  --shadow: 8px 8px 0 rgba(17, 17, 17, 0.26);
+  --radius: 0;
+  --radius-sm: 0;
+  --page-width: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 1.0rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.prose img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 1.5rem auto;
+}
+
+.prose .image-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 1.5rem 0;
+}
+
+.prose .image-row img {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .prose .image-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+main {
+  width: min(calc(100% - 2rem), var(--page-width));
+  margin: 0 auto;
+}
+
+.page-shell {
+  position: relative;
+  overflow: clip;
+}
+
+.page-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: none;
+}
+
+.site-header {
+  width: min(calc(100% - 2rem), var(--page-width));
+  margin: 0 auto;
+  padding: 1.35rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-title {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 24pt;
+  line-height: 1.1;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  justify-content: flex-end;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  color: var(--muted);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a[aria-current='page'] {
+  color: var(--accent);
+  border-bottom-color: var(--accent-yellow);
+}
+
+.hero {
+  padding: 4rem 0 2.5rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.hero h1,
+.section-heading,
+.entry-title {
+  margin: 0;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.hero h1,
+.entry-title {
+  font-size: 24pt;
+}
+
+.hero h1 {
+  max-width: 14ch;
+}
+
+.hero p,
+.page-intro,
+.card-summary,
+.meta,
+.empty-state,
+.prose p,
+.prose li {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero-panel,
+.section,
+.card,
+.content-card,
+.quote-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 1.3rem;
+}
+
+.hero-panel p:first-child {
+  margin-top: 0;
+}
+
+.news-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.news-item {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.news-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.news-date {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.news-line {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.news-separator {
+  margin: 0 0.45rem;
+  color: var(--muted);
+}
+
+.news-title {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.94rem;
+  color: var(--text);
+}
+
+.news-title-link {
+  color: inherit;
+}
+
+.news-title-link:hover {
+  color: var(--accent);
+}
+
+.news-summary {
+  display: inline;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.news-summary a,
+.news-summary i,
+.news-summary p {
+  display: inline;
+  margin: 0;
+}
+
+.news-summary a {
+  color: var(--accent);
+}
+
+.news-summary a:hover {
+  color: var(--accent-cyan);
+}
+
+.section {
+  padding: 1.2rem;
+}
+
+.section + .section,
+.hero + .section,
+.hero + .content-card {
+  margin-top: 1.25rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: 20pt;
+}
+
+.meta {
+  margin: 0;
+  font-family: 'Templo Fino', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-grid,
+.publication-list,
+.link-list,
+.content-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.15rem;
+}
+
+.card-surface-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-surface-link:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: -2px;
+}
+
+.card:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--border-strong);
+  box-shadow: 10px 10px 0 rgba(17, 17, 17, 0.3);
+}
+
+.card-topline,
+.card-title,
+.card-summary,
+.card-footer {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card-topline {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.card-title,
+.publication-title {
+  margin: 0;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 18pt;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.card-title {
+  transition: color 160ms ease;
+}
+
+.card:hover .card-title,
+.card:focus-within .card-title {
+  color: var(--accent);
+}
+
+.card:has(.tag-row:hover) .card-title {
+  color: var(--text);
+}
+
+.card-date,
+.card-status,
+.publication-year {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card-status {
+  color: var(--accent-yellow);
+}
+
+.card-summary {
+  margin: 0;
+}
+
+.tag-row,
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-row {
+  position: relative;
+  z-index: 3;
+}
+
+.tag,
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  padding: 0 0.7rem;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  line-height: 1;
+  color: var(--muted);
+  background: var(--surface-strong);
+  text-transform: uppercase;
+  height: 1.45rem;
+}
+
+.tag {
+  height: 1.45rem;
+}
+
+.tag-link {
+  text-decoration: none;
+}
+
+.filter-chip {
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.filter-chip:hover {
+  color: var(--accent);
+}
+
+.filter-chip[aria-pressed='true'] {
+  background: var(--accent-yellow);
+  color: #111111;
+  border-color: var(--border-strong);
+  box-shadow: 3px 3px 0 var(--accent-yellow);
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card-link,
+.inline-link,
+.back-link {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.card-link:hover,
+.inline-link:hover,
+.back-link:hover {
+  color: var(--accent-cyan);
+}
+
+.card-link::after,
+.inline-link::after,
+.back-link::after {
+  content: '↗';
+  margin-left: 0.3rem;
+}
+
+.publication-list {
+  margin-top: 1rem;
+}
+
+.publication-group + .publication-group {
+  margin-top: 1.8rem;
+}
+
+.publication-group h2 {
+  margin: 0 0 1rem;
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 24pt;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.publication-item {
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.publication-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.publication-citation {
+  margin: 0.35rem 0 0;
+}
+
+.home-publication-title {
+  font-size: 14pt;
+}
+
+.prose {
+  max-width: 72ch;
+}
+
+.content-card.prose {
+  max-width: none;
+}
+
+.project-detail {
+  margin-top: 4rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  letter-spacing: normal;
+  margin: 0;
+  text-transform: none;
+}
+
+.prose h1 {
+  font-size: 24pt;
+}
+
+.hero-panel.prose h1 {
+  font-size: 28pt;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  font-size: 20pt;
+}
+
+.prose h3 {
+  margin-top: 1.5rem;
+  font-size: 16pt;
+}
+
+.prose h4 {
+  margin-top: 1.25rem;
+  font-size: 13pt;
+}
+
+.prose h5 {
+  margin-top: 1rem;
+  font-size: 11pt;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  font-size: 1.0rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.hero-panel.prose .card-summary {
+  font-size: 0.82rem;
+  line-height: 1.3;
+  color: var(--muted);
+  margin: 0;
+}
+
+.hero-panel.prose h1 + .card-summary {
+  margin-top: 0.45rem;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.prose th {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  background: transparent;
+}
+
+.content-card.prose .entry-title + .page-intro {
+  margin-top: 1rem;
+}
+
+.content-card.prose .entry-title + .bio-body {
+  margin-top: 1rem;
+}
+
+.content-card.prose .entry-title + .contact-copy {
+  margin-top: 1rem;
+}
+
+.contact-form {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+  max-width: 40rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-label {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  border: 2px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
+  border-radius: 0;
+  padding: 0.55rem 0.65rem;
+}
+
+.contact-input:focus-visible,
+.contact-textarea:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 1px;
+  border-color: var(--border-strong);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 8.5rem;
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  height: 1.9rem;
+  padding: 0 0.9rem;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+.contact-submit:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.contact-status {
+  margin: 0;
+  min-height: 1.2rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.contact-status-success {
+  color: var(--accent-yellow);
+}
+
+.contact-status-error {
+  color: var(--accent);
+}
+
+.contact-botcheck {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.content-card.prose .tag-row {
+  margin-bottom: 1rem;
+}
+
+.prose a:not(.tag-link) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.prose a:not(.tag-link):hover {
+  color: var(--accent-cyan);
+}
+
+.content-card {
+  padding: 1.4rem;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.site-footer {
+  width: min(calc(100% - 2rem), var(--page-width));
+  margin: 2rem auto 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-family: 'Templo Gruesa', 'Courier New', monospace;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  main,
+  .site-header,
+  .site-footer {
+    width: min(calc(100% - 1rem), var(--page-width));
+  }
+
+  .hero {
+    padding-top: 2.6rem;
+  }
+
+  .project-detail {
+    margin-top: 2.6rem;
+  }
+
+  .section,
+  .content-card,
+  .card {
+    border-radius: 0;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

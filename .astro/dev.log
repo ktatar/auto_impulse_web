@@ -1,0 +1,182 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Astro config changed","label":"content","level":"info"}
+{"message":"Clearing content store","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.0.7 ready in 1682 ms\n┃ Local    http://127.0.0.1:4321/","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] /projects 75ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] / 15ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 5ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 22ms","label":null,"level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 20ms","label":null,"level":"info"}
+{"message":"[200] /projects 13ms","label":null,"level":"info"}
+{"message":"[200] /projects 12ms","label":null,"level":"info"}
+{"message":"[200] /projects 4ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 9ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 15ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 15ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 15ms","label":null,"level":"info"}
+{"message":"[200] /projects 15ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /projects 18ms","label":null,"level":"info"}
+{"message":"[200] /projects 12ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/pages/projects/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 16ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 18ms","label":null,"level":"info"}
+{"message":"[200] /projects 12ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 6ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 17ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[200] /projects 2ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"src/pages/projects/index.astro","label":"watch","level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 14ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] /projects 13ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[console.warn] Error restoring session i@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38765\no@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:4:38940\n56710/s/request/<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:1:12790\n675768/u/</s<@moz-extension://7d20271c-d490-47c5-aae5-de4ed7d0480b/scripts/inpage.js;:7:83308\n","label":"vite","level":"warn"}
+{"message":"[200] /projects 3ms","label":null,"level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] /projects 9ms","label":null,"level":"info"}
+{"message":"[200] / 12ms","label":null,"level":"info"}
