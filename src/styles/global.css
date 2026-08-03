@@ -398,15 +398,36 @@ main {
 }
 
 .card {
+  position: relative;
   display: grid;
   gap: 0.8rem;
   padding: 1.15rem;
+}
+
+.card-surface-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-surface-link:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: -2px;
 }
 
 .card:hover {
   transform: translate(-2px, -2px);
   border-color: var(--border-strong);
   box-shadow: 10px 10px 0 rgba(17, 17, 17, 0.3);
+}
+
+.card-topline,
+.card-title,
+.card-summary,
+.card-footer {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .card-topline {
@@ -424,6 +445,19 @@ main {
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
+}
+
+.card-title {
+  transition: color 160ms ease;
+}
+
+.card:hover .card-title,
+.card:focus-within .card-title {
+  color: var(--accent);
+}
+
+.card:has(.tag-row:hover) .card-title {
+  color: var(--text);
 }
 
 .card-date,
@@ -449,6 +483,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.tag-row {
+  position: relative;
+  z-index: 3;
 }
 
 .tag,
