@@ -690,6 +690,102 @@ main {
   margin-top: 1rem;
 }
 
+.content-card.prose .entry-title + .bio-body {
+  margin-top: 1rem;
+}
+
+.content-card.prose .entry-title + .contact-copy {
+  margin-top: 1rem;
+}
+
+.contact-form {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+  max-width: 40rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-label {
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  border: 2px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
+  border-radius: 0;
+  padding: 0.55rem 0.65rem;
+}
+
+.contact-input:focus-visible,
+.contact-textarea:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 1px;
+  border-color: var(--border-strong);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 8.5rem;
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  height: 1.9rem;
+  padding: 0 0.9rem;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-family: 'Karma Suture', 'Courier New', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+.contact-submit:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.contact-status {
+  margin: 0;
+  min-height: 1.2rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.contact-status-success {
+  color: var(--accent-yellow);
+}
+
+.contact-status-error {
+  color: var(--accent);
+}
+
+.contact-botcheck {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
 .content-card.prose .tag-row {
   margin-bottom: 1rem;
 }
