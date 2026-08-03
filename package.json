@@ -20,7 +20,7 @@
     "@fontsource/space-grotesk": "^5.2.10",
     "@fontsource/space-mono": "^5.2.9",
     "astro": "^7.0.7",
-    "bibtex-parse-js": "^0.0.24",
+    "bibtex-parse-js": "^0.0.23",
     "gray-matter": "^4.0.3",
     "rehype-external-links": "^3.0.0"
   },
