@@ -606,6 +606,10 @@ main {
   margin-top: 4rem;
 }
 
+.project-detail .card-footer {
+  pointer-events: auto;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
