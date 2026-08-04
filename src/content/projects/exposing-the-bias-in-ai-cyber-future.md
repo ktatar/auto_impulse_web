@@ -6,6 +6,7 @@ status: archive
 tags:
   - Live Performance
   - Audiovisual
+  - Visual AI
 
 ---
 

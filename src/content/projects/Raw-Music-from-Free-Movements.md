@@ -18,11 +18,15 @@ tags:
 | Kıvanç Tatar | Chalmers University of Technology, Sweden|
 | Daniel Bisig | Zurich University of the Arts, Switzerland |
 
+<img src="/content-images/projects/ramfem/movement_audio.png" alt="Multimodal dataset in Raw Music From Free Movements." style="display:block; margin:0 auto; max-width:1080px; height:auto;" />
+
 ## Description
-Raw Music from Free Movements<d-cite key="bisig_raw_2021"></d-cite> is a deep learning architecture that translates pose sequences into audio waveforms. The architecture combines a sequence-to-sequence model generating audio encodings and an adversarial autoencoder that generates raw audio from audio encodings. Experiments have been conducted with two datasets: a dancer improvising freely to a given music, and music created through simple movement sonification. The paper presents preliminary results. These will hopefully lead closer towards a model which can learn from the creative decisions a dancer makes when translating music into movement and then follow these decisions reversely for the purpose of generating music from movement.
+
+Raw Music from Free Movements [1] is a deep learning architecture that translates pose sequences into audio waveforms. The architecture combines a sequence-to-sequence model generating audio encodings and an adversarial autoencoder that generates raw audio from audio encodings. Experiments have been conducted with two datasets: a dancer improvising freely to a given music, and music created through simple movement sonification. The paper presents preliminary results. These will hopefully lead closer towards a model which can learn from the creative decisions a dancer makes when translating music into movement and then follow these decisions reversely for the purpose of generating music from movement.
+
 ## Architecture
 
-<img src="/content-images/projects/ramfem/ramfem-arch.png" alt="The Deep Learning architecture in Raw Music From Free Movements." style="display:block; margin:0 auto; max-width:500px; height:auto;" />
+<img src="/content-images/projects/ramfem/ramfem-arch.png" alt="The Deep Learning architecture in Raw Music From Free Movements." style="display:block; margin:0 auto; max-width:1280px; height:auto;" />
 
 ## Examples
 
@@ -32,17 +36,14 @@ The sonification dataset contains the same pose sequences as the improvisation d
 
 ## Resources
 
-### Code
-<i class="fa-brands fa-github"></i> <a>https://bitbucket.org/dbisig/rawmusicfromfreemovements</a>
+<i class="fa-brands fa-github"></i> <b>Code:</b> <a>https://bitbucket.org/dbisig/rawmusicfromfreemovements</a>
 
-### Supplementary Material
-
-<i class="fa-solid fa-plus"></i> <a>https://zenodo.org/record/4656086</a>
+<i class="fa-solid fa-plus"></i> <b>Supplementary Material:</b> <a>https://zenodo.org/record/4656086</a>
 
 ## Acknowledgements
 
-The authors’ thanks go to the dancers who have contributed countless hours o their spare time to the motion capture recordings. Further thanks go to MotionBank for providing their infrastructure and assisting in the recordings. This research is conducted in the context of a Marie Curie Fellowship and is funded by the European Union. The collaboration of the second author has been supported by the Canada Council for the Arts.'
+The authors’ thanks go to the dancers who have contributed countless hours o their spare time to the motion capture recordings. Further thanks go to MotionBank for providing their infrastructure and assisting in the recordings. This research is conducted in the context of a Marie Curie Fellowship and is funded by the European Union. The collaboration of the second author has been supported by the Canada Council for the Arts.
 
-## Refences
+## References
 
 [1] Bisig D., Tatar, K. (2021). Raw Music from Free Movements: Early Experiments in Using Machine Learning to Create Raw Audio from Dance Movements. In Proceedings of AI Music Creativity Conference 2021. [Best Paper Award](https://aimc2021.iem.at/wp-content/uploads/2021/06/AIMC_2021_Bisig_Tatar.pdf).

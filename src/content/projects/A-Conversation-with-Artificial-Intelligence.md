@@ -1,7 +1,7 @@
 ---
 title: A Conversation with Artificial Intelligence
 description: The first live performance of the MASOM system, where I am improvising with a musical AI agent in Vancouver BC, Canada.
-date: 2022-01
+date: 2016-10
 status: archive
 tags:
   - Live Performance
