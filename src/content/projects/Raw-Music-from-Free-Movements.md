@@ -1,7 +1,7 @@
 ---
 title: Raw Music From Free Movements
 description: Human Body Pose Sequences into Audio Waveforms.
-date: 2020-10-20
+date: 2021-08
 status: archive
 tags:
   - Neural Audio Synthesis

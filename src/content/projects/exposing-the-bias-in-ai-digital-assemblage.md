@@ -6,6 +6,8 @@ status: current
 tags:
   - Live Performance
   - Audiovisual
+  - Visual AI
+  - Voice AI
 
 ---
 

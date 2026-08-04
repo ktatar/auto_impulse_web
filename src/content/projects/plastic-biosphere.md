@@ -73,7 +73,7 @@ This stream is hosted on the traditional, ancestral, unceded territory of the Co
 @UNATC Garden Bucharest, Romania<br>
 ARS ELECTRONICA FESTIVAL 2020</small><br>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; align-items:start; margin:1rem 0;">
+<div class="media-grid media-grid-spacious">
   <img src="/content-images/projects/plastic-biosphere/pb-1.1.jpg" alt="Plastic Biosphere No.1 still 1" />
   <img src="/content-images/projects/plastic-biosphere/pb-1.2.jpg" alt="Plastic Biosphere No.1 still 2" />
   <img src="/content-images/projects/plastic-biosphere/pb-1.3.jpg" alt="Plastic Biosphere No.1 still 3" />
@@ -98,9 +98,6 @@ between five international artists, virtually gathered in CINETic
 Residencies, active in interactive art and CINETic Centre researchers 
 and artists.<br>
 
-</div>
-	<div grid-col="x11" grid-pad="2" class="">
-
 <small>UNATC Garden Bucharest Youtube Channel: <a href="https://www.youtube.com/channel/UC_H8vS0mUUeKsLv7Tkw4AbA" target="_blank">https://www.youtube.com/channel/UC_H8vS0mUUeKsLv7Tkw4AbA</a><br>Ars Electronica page: <a href="https://ars.electronica.art/keplersgardens/en/cinetic-residencies-talk/" target="_blank">https://ars.electronica.art/keplersgardens/en/cinetic-residencies-talk/</a>
 <br>UNATC page: <a href="https://cinetic.arts.ro/plastic-biosphere/" target="_blank">https://cinetic.arts.ro/plastic-biosphere/</a></small>
 
@@ -123,7 +120,7 @@ Session page on Ars Electronica 2020 program-> [📺](https://ars.electronica.ar
 | Author | Role |
 | --- | --- |
 | [Kıvanç Tatar](https://www.kivantatar.com/) | Artist, Creative AI developer |
-| [Grigore Burloiu](https://cinetic.arts.ro/en/echipa/grigore-burloiu/) | Technical Director
+| [Grigore Burloiu](https://cinetic.arts.ro/en/echipa/grigore-burloiu/) | Technical Director |
 | [Marius Hodea](https://cinetic.arts.ro/en/echipa/marius-hodea/) | 3D Modelling |
 | [Iuliana Gherghescu](https://cinetic.arts.ro/en/echipa/iuliana-gherghescu/) | Set Design |
 | Andrei Gindac | Admin |
