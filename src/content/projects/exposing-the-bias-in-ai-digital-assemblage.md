@@ -1,7 +1,7 @@
 ---
 title: "Exposing the Bias in AI: Digital Assemblage"
 description: An audiovisual performance exposing how AI systems encode gendered and demographic associations.
-date: 2026-05-01
+date: 2026-03-01
 status: current
 tags:
   - Live Performance

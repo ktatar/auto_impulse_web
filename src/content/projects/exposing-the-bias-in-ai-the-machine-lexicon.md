@@ -1,9 +1,8 @@
 ---
-title: "Exposing the Bias in Artificial Intelligence: 
-The Machine Lexicon"
+title: "Exposing the Bias in Artificial Intelligence: The Machine Lexicon"
 description: An audiovisual performance exposing how AI systems encode gendered and demographic associations.
-date: 2026-02
-status: current
+date: 2025-09
+status: archive
 tags:
   - Live Performance
   - Audiovisual
