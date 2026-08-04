@@ -73,6 +73,12 @@ This stream is hosted on the traditional, ancestral, unceded territory of the Co
 @UNATC Garden Bucharest, Romania<br>
 ARS ELECTRONICA FESTIVAL 2020</small><br>
 
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; align-items:start; margin:1rem 0;">
+  <img src="/content-images/projects/plastic-biosphere/pb-1.1.jpg" alt="Plastic Biosphere No.1 still 1" />
+  <img src="/content-images/projects/plastic-biosphere/pb-1.2.jpg" alt="Plastic Biosphere No.1 still 2" />
+  <img src="/content-images/projects/plastic-biosphere/pb-1.3.jpg" alt="Plastic Biosphere No.1 still 3" />
+</div>
+
 No.1 is an interactive installation where a silhouette of the audience’s body pixelates an anthropocene landscape 
 that is stylized by artificial intelligence using images of plastic, andmusic is generated in realtime by using an AI system called <a href="MASOM" rel="history">MASOM</a>. 
 
@@ -122,5 +128,3 @@ Session page on Ars Electronica 2020 program-> [📺](https://ars.electronica.ar
 | [Iuliana Gherghescu](https://cinetic.arts.ro/en/echipa/iuliana-gherghescu/) | Set Design |
 | Andrei Gindac | Admin |
 | [Assoc. Prof. Alexandru Berceanu](https://cinetic.arts.ro/en/echipa/alexandru-berceanu/) | CINETic Director |
-
-
