@@ -7,10 +7,23 @@ type ProjectEntry = CollectionEntry<'projects'>;
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  return projects.map((project) => ({
-    params: { slug: project.id },
-    props: { project }
-  }));
+  return projects.flatMap((project) => {
+    const fileSlug = project.filePath
+      ? project.filePath
+          .replace(/\\/g, '/')
+          .split('/')
+          .pop()
+          ?.replace(/\.md$/i, '')
+      : undefined;
+    const slugVariants = Array.from(
+      new Set([project.id, project.id.toLowerCase(), project.id.toUpperCase(), fileSlug].filter(Boolean))
+    );
+
+    return slugVariants.map((slug) => ({
+      params: { slug },
+      props: { project }
+    }));
+  });
 }
 
 const { project } = Astro.props as { project: ProjectEntry };
