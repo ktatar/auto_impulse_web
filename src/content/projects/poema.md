@@ -1,7 +1,7 @@
 ---
 title: POEMA
 description: A performance-driven project focused on breath, sound, and immersive interaction.
-date: 2018-09-01
+date: 2016-08
 status: archive
 tags:
   - Virtual Reality
@@ -29,35 +29,33 @@ An excerpt of musical AI’s audio output:<br><audio controls="controls" control
 ## Publications
 
 -&gt;
-<b>Tatar, K.</b>, Prpa M., &amp; Pasquier, P. (2019). <i>Respire: </i><i>A Virtual Reality Art Piece with a Musical Agent guided by Respiratory Interaction</i>. <i>Leonardo Music Journal </i>Volume 29. <small><a href="https://doi.org/10.1162/lmj_a_01057" target="_blank">https://doi.org/10.1162/lmj_a_01057</a></small><br><div style="text-align: left;">︎<small>Related Projects:</small> <small><i><a href="https://kivanctatar.com/Respire" rel="history">Respire</a>, <a href="https://kivanctatar.com/Pulse-Breath-Water" rel="history">Pulse.Breath.Water </a></i></small></div>
+<b>Tatar, K.</b>, Prpa M., &amp; Pasquier, P. (2019). <i>Respire: </i><i>A Virtual Reality Art Piece with a Musical Agent guided by Respiratory Interaction</i>. <i>Leonardo Music Journal </i>Volume 29. <small><a href="https://doi.org/10.1162/lmj_a_01057" target="_blank">https://doi.org/10.1162/lmj_a_01057</a></small><br><div style="text-align: left;"><small>Related Projects:</small> <small><i><a href="https://kivanctatar.com/Respire" rel="history">Respire</a>, <a href="https://kivanctatar.com/Pulse-Breath-Water" rel="history">Pulse.Breath.Water </a></i></small></div>
 
-<br>
-<br>
-<div class="image-gallery" gid="3">
-{image 26}
-{image 47 caption="Photo: Adriano Fagundes"}
-{image 35 caption="Photo: Adriano Fagundes"}
-{image 30}
-{image 28 caption="Photo: Adriano Fagundes"}
-{image 32 caption="Photo: Mirjana Prpa"}
-{image 25}
-{image 29 caption="Photo: Adriano Fagundes"}
-{image 27 caption="Beautiful POEMA team. Photo: Adriano Fagundes"}
-{image 31}
-{image 33 caption="Photo: Adriano Fagundes"}
-{image 34 caption="Photo: Adriano Fagundes"}
-{image 37}
-{image 36 caption="Dancers listening to the musical agent (AI) trained on Portuguese speech for the first time."}
-{image 38}
-{image 40 caption="Photo: Mirjana Prpa"}
-{image 42 caption="Photo: Adriano Fagundes"}
-{image 43}
-{image 44}
-{image 45}
-{image 46 caption="POEMA Setup @Oi Futuro, Rio de Janeiro, Brazil"}
-{image 39 caption="Photo: Adriano Fagundes"}
-{image 41}
-{image 48}
+<div class="media-slider" aria-label="POEMA image slideshow" data-autoplay-ms="4000">
+  <div class="media-slider-track">
+    <figure class="media-slide" id="poema-slide-1">
+      <img src="/content-images/projects/poema/1POEMA-837.jpg" alt="POEMA performance still 6" loading="lazy" />
+    </figure>
+    <figure class="media-slide" id="poema-slide-2">
+      <img src="/content-images/projects/poema/1POEMA-651.jpg" alt="POEMA performance still 5" loading="lazy" />
+    </figure>
+    <figure class="media-slide" id="poema-slide-3">
+      <img src="/content-images/projects/poema/1POEMA-525.jpg" alt="POEMA performance still 4" loading="lazy" />
+    </figure>
+    <figure class="media-slide" id="poema-slide-4">
+      <img src="/content-images/projects/poema/1POEMA-191.jpg" alt="POEMA performance still 3" loading="lazy" />
+    </figure>
+    <figure class="media-slide" id="poema-slide-5">
+      <img src="/content-images/projects/poema/1POEMA-187.jpg" alt="POEMA performance still 2" loading="lazy" />
+    </figure>
+    <figure class="media-slide" id="poema-slide-6">
+      <img src="/content-images/projects/poema/1POEMA-47.jpg" alt="POEMA performance still 1" loading="lazy" />
+    </figure>
+  </div>
+  <div class="media-slide-nav" aria-label="Slide navigation">
+    <a class="media-slide-arrow prev" href="#" aria-label="Previous image">&larr; Prev</a>
+    <a class="media-slide-arrow next" href="#" aria-label="Next image">Next &rarr;</a>
+  </div>
 </div>
 
 ## Acknowledgements

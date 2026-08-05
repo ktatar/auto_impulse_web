@@ -47,4 +47,136 @@ const year = new Date(project.data.date).getFullYear();
       <a class="tag tag-link" href="/projects">ALL PROJECTS</a>
     </div>
   </article>
+  <script is:inline>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const sliders = document.querySelectorAll('.media-slider-track');
+
+      sliders.forEach((track) => {
+        const slider = track.closest('.media-slider');
+        if (!slider) {
+          return;
+        }
+
+        const configuredInterval = Number.parseInt(slider.getAttribute('data-autoplay-ms') ?? '', 10);
+        const autoAdvanceInterval = Number.isFinite(configuredInterval)
+          ? Math.max(1200, configuredInterval)
+          : 5000;
+
+        const slides = Array.from(track.querySelectorAll('.media-slide'));
+        if (slides.length < 2) {
+          return;
+        }
+
+        let activeIndex = 0;
+        let autoAdvanceTimer = null;
+
+        const updateActiveIndex = () => {
+          const currentLeft = track.scrollLeft;
+          const maxScrollLeft = track.scrollWidth - track.clientWidth;
+
+          if (currentLeft <= 1) {
+            activeIndex = 0;
+            return;
+          }
+
+          if (currentLeft >= maxScrollLeft - 1) {
+            activeIndex = slides.length - 1;
+            return;
+          }
+
+          let nearest = 0;
+          let minDistance = Number.POSITIVE_INFINITY;
+
+          slides.forEach((slide, index) => {
+            const distance = Math.abs(slide.offsetLeft - currentLeft);
+            if (distance < minDistance) {
+              minDistance = distance;
+              nearest = index;
+            }
+          });
+
+          activeIndex = nearest;
+        };
+
+        const scrollToIndex = (nextIndex, smooth = true) => {
+          activeIndex = (nextIndex + slides.length) % slides.length;
+          const behavior = smooth ? 'smooth' : 'auto';
+          track.scrollTo({ left: slides[activeIndex].offsetLeft, behavior });
+        };
+
+        const stopAutoAdvance = () => {
+          if (autoAdvanceTimer !== null) {
+            window.clearInterval(autoAdvanceTimer);
+            autoAdvanceTimer = null;
+          }
+        };
+
+        const startAutoAdvance = () => {
+          stopAutoAdvance();
+          if (prefersReducedMotion.matches) {
+            return;
+          }
+
+          autoAdvanceTimer = window.setInterval(() => {
+            scrollToIndex(activeIndex + 1);
+          }, autoAdvanceInterval);
+        };
+
+        track.addEventListener('scroll', updateActiveIndex, { passive: true });
+
+        slider.querySelectorAll('.media-slide-arrow.prev').forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+            updateActiveIndex();
+            scrollToIndex(activeIndex - 1);
+            startAutoAdvance();
+          });
+        });
+
+        slider.querySelectorAll('.media-slide-arrow.next').forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+            updateActiveIndex();
+            scrollToIndex(activeIndex + 1);
+            startAutoAdvance();
+          });
+        });
+
+        track.addEventListener('pointerenter', stopAutoAdvance);
+        track.addEventListener('pointerleave', startAutoAdvance);
+        track.addEventListener('focusin', stopAutoAdvance);
+        track.addEventListener('focusout', startAutoAdvance);
+
+        const nav = slider.querySelector('.media-slide-nav');
+        if (nav) {
+          nav.addEventListener('pointerenter', stopAutoAdvance);
+          nav.addEventListener('pointerleave', startAutoAdvance);
+          nav.addEventListener('focusin', stopAutoAdvance);
+          nav.addEventListener('focusout', startAutoAdvance);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopAutoAdvance();
+          } else {
+            startAutoAdvance();
+          }
+        });
+
+        if (window.location.hash) {
+          const hashTarget = track.querySelector(window.location.hash);
+          if (hashTarget) {
+            const index = slides.indexOf(hashTarget);
+            if (index >= 0) {
+              scrollToIndex(index, false);
+            }
+          }
+        }
+
+        updateActiveIndex();
+        startAutoAdvance();
+      });
+    })();
+  </script>
 </BaseLayout>
