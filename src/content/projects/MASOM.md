@@ -19,6 +19,18 @@ MASOM also extracts higher level features such as eventfulness (arousal), pleasa
 
 <i class="fa-brands fa-github"></i> <b>Code:</b> <a>https://github.com/ktatar/MASOM</a></b>
 
+## Conceptualization and Architectural Design of MASOM
+
+The architectural design of MASOM is an extension of my electroacoustic music composition studies that I received during my masters at Institute for Advanced Studies in Music (MIAM) at Istanbul Technical University. The Sonic Arts syllabus at MIAM focused on electroacoustic composition, sound studies, and history of electronic music. During my masters studies, I became invested in 20th century electronic music theories and sound materiality. To this day, I continue my research interest in sound materiality and I still publish on this thread beyond MASOM, such as [].
+
+I developed and tested the first implementation of MASOM as a Max patch (rather a spagetti mess) during a three-day public holiday in 2015. The reason that I allocated that public holiday for this project was that I was given work tasks in other research directions, which were more inline with tools for certain commercial products. Hence, I used the holiday to pursue a much more personally interesting idea arising from my passion of organising sounds in timbre and temporality.
+
+This first implementation comprised all the conceptual and architectural design and components of MASOM: the online and offline machine listening, the self-organizing maps, the variable Markov models, and the affective computing; both in model training and realtime interaction. Additionally, the first implementation grew directly from my artistic research. The first MASOM agent was trained on my own (rather noisy) improvised music album titled Self Disruption, and I publicly performed with this first MASOM iteration in realtime within the title "A Conversation with Artificial Intelligence."
+
+The later iterations of MASOM have been built on the concept, design, and AI architecture of the first implementation. Those later iterations investigated tests for larger datasets, better UI for training and realtime interaction; cleaning up of the spagetti Max messes using abstraction tools such as Jamoma, testing different sets of audio features, and testing other statistical sequence models (ie Factor Oracle).
+
+Later, MASOM became the main foundation of my doctoral thesis. Many people contributed to the research and implementation of MASOM. For example, the multivariate model of affective computing was created with help from Jianyu Fan. I utilized libraries and works of many others in the first implementation (as cited in the first academic publication of MASOM), including the self-organizing map Max implementation by ... and Variable Markov models Java implementation by ... Many of my teachers and other academic colleagues have been very supportive in directing me to some of these resources. I am greateful for the support that I received from everyone and the funding organizations, which helped me to conceptualize, design, and implement MASOM initially. Since then, MASOM has been an influential work for a decade, picked up by many other researchers and artists, who have progressed the MASOM architecture to a variety of musical and technical directions.
+
 ## Publications
 
 [1] **Tatar K.**, Pasquier P., Siu R. (2019) Audio-based Musical Artificial Intelligence and Audio-Reactive Visual Agents in Revive. Accepted to the International Computer Music Conference and New York City Electroacoustic Music Festival 2019 (<a href="https://nycemf.org" target="_blank">ICMC-NYCEMF 2019</a>).

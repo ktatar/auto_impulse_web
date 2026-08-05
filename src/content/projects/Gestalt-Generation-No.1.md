@@ -1,5 +1,5 @@
 ---
-title: "Gestalt Generation"
+title: "Gestalt Generation No.1"
 description: Two robotic arms controlled by reinforcement learning agents learning intimacy and borders.
 date: 2021-01-01
 status: archive
@@ -14,8 +14,8 @@ tags:
 The artwork features two virtual robotic arms controlled by two reinforcement learning agents. The robotic arms are moving within a Unity virtual environment while learning from each other in realtime.  On the AI side, the robotic arms are controlled by a Reinforcement Learning (Proximal Policy Optimization, PPO-2). The reward scheme is build on the idea that two arms should move closer to each other, while not colliding. Hence, the robotic arms are training two different PPO-2 models in realtime by moving within a Unity environment. 
 The audience observes the trial and errors of two AIs in a gallery setting.
 
-<img src="/content-images/projects/ramfem/movement_audio.png" alt="Multimodal dataset in Raw Music From Free Movements." style="display:block; margin:0 auto; max-width:1080px; height:auto;" />
-<small>&nbsp;photo by <a href="https://www.facebook.com/anpis" target="_blank">Anpis Wang</a></small></div>
+<img src="/content-images/projects/gestalt-generation-no.1/gestalt-generation-no.1.jpg" alt="Gestalt Generation No.1" style="display:block; margin:0 auto; max-width:1080px; height:auto;" />
+<small>photo by <a href="https://www.facebook.com/anpis" target="_blank">Anpis Wang</a></small></div>
 <br>
 The virtual stage features two robotic arms, which symbols the oncoming automation of labour, learning to touch one another and share space. This fragile becoming is the ultimate process-work where the machines rigorously exhaust possible outcomes as they begin to “sense” one another over large timescales. To us— spectators, it looks like a brittle but enticing dance filled with potential energy.<br>
 <br>
