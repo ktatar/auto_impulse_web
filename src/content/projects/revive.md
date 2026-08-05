@@ -1,12 +1,12 @@
 ---
-title: REVIVE
+title: "Revive"
 description: A live performance with audiovisual AI agents.
 date: 2018-05
 status: archive
 tags:
   - Live Performance
   - Musical AI
-  - Audio-Visual
+  - Audiovisual
 ---
 
 <small>

@@ -7,7 +7,7 @@ tags:
   - Virtual Reality
   - Interactive Arts
   - Musical AI
-  - Movement Computation
+  - Movement Computing
 ---
 
 <small>by Kıvanç Tatar, Mirjana Prpa, and Philippe Pasquier<small>
