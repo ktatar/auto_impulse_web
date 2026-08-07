@@ -1,7 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { slugifyTag } from '../../lib/projects';
+import { collectProjectTags, loadProjects, slugifyTag, splitProjects } from '../../lib/projects';
 
 type ProjectEntry = CollectionEntry<'projects'>;
 
@@ -29,6 +29,8 @@ export async function getStaticPaths() {
 const { project } = Astro.props as { project: ProjectEntry };
 const { Content } = await render(project);
 const year = new Date(project.data.date).getFullYear();
+const allProjects = await loadProjects();
+const currentTagSet = new Set(collectProjectTags(splitProjects(allProjects).current));
 ---
 <BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description}>
   <article class="section content-card prose project-detail">
@@ -38,9 +40,14 @@ const year = new Date(project.data.date).getFullYear();
     <h1 class="entry-title">{project.data.title}</h1>
     <p class="page-intro">{project.data.description}</p>
     <div class="tag-row" aria-label="Project tags">
-      {project.data.tags.map((tag) => (
-        <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
-      ))}
+      {project.data.tags.map((tag) => {
+        const isCurrentTag = currentTagSet.has(tag);
+        return (
+          <a class={`tag tag-link${isCurrentTag ? ' current-tag-highlight' : ''}`} href={`/projects?tag=${slugifyTag(tag)}`}>
+            {tag}
+          </a>
+        );
+      })}
     </div>
     <Content />
     <div class="card-footer">

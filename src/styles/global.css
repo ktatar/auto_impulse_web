@@ -647,6 +647,18 @@ main {
   box-shadow: 3px 3px 0 var(--accent-yellow);
 }
 
+.project-filter-row .current-tag-highlight:not([aria-pressed='true']),
+.tag-row .current-tag-highlight {
+  background: #ffe14a13;
+  border-color: var(--border-strong);
+  color: #3a2432;
+}
+
+.project-filter-row .current-tag-highlight:not([aria-pressed='true']):hover,
+.tag-row .current-tag-highlight:hover {
+  color: var(--accent);
+}
+
 .card-footer {
   display: flex;
   flex-wrap: wrap;

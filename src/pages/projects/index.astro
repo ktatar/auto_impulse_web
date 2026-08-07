@@ -89,18 +89,6 @@ const tags = collectProjectTags(projects).map((tag) => ({
       box-shadow: 3px 3px 0 var(--accent-yellow);
     }
 
-    .project-filter-row .current-tag-highlight:not([aria-pressed='true']),
-    .tag-row .current-tag-highlight {
-      background: #ff2fba1f;
-      border-color: var(--border-strong);
-      color: #3a2432;
-    }
-
-    .project-filter-row .current-tag-highlight:not([aria-pressed='true']):hover,
-    .tag-row .current-tag-highlight:hover {
-      color: var(--accent);
-    }
-
     .card {
       overflow: hidden;
       opacity: 1;
