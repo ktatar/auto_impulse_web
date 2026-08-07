@@ -23,10 +23,6 @@ const tags = collectProjectTags(projects).map((tag) => ({
     <section class="hero" style="padding-bottom: 1.5rem;">
       <div class="hero-panel prose project-hero-panel">
         <h1>Projects</h1>
-        <p class="card-summary">
-          The list defaults to chronological order. Pick one tag to filter the project cards across both the current
-          and archive sections.
-        </p>
         <div class="filter-row project-filter-row" data-tag-filter>
           <label class="filter-chip" for="filter-all">All</label>
           {tags.map((tag) => (
@@ -68,6 +64,10 @@ const tags = collectProjectTags(projects).map((tag) => ({
 
     .project-filter-row {
       margin-top: 1rem;
+    }
+
+    .project-sections .section-heading {
+      color: var(--muted);
     }
 
     .filter-toggle {

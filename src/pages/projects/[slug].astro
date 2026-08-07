@@ -39,7 +39,7 @@ const currentTagSet = new Set(collectProjectTags(splitProjects(allProjects).curr
     </div>
     <h1 class="entry-title">{project.data.title}</h1>
     <p class="page-intro">{project.data.description}</p>
-    <div class="tag-row" aria-label="Project tags">
+    <div class="tag-row project-tag-row" aria-label="Project tags">
       {project.data.tags.map((tag) => {
         const isCurrentTag = currentTagSet.has(tag);
         return (
@@ -48,12 +48,18 @@ const currentTagSet = new Set(collectProjectTags(splitProjects(allProjects).curr
           </a>
         );
       })}
+      <a class="tag tag-link tag-all-projects-top" href="/projects">==(/^-^)/... ALL PROJECTS</a>
     </div>
     <Content />
     <div class="card-footer">
-      <a class="tag tag-link" href="/projects">ALL PROJECTS</a>
+      <a class="tag tag-link" href="/projects">==(/^-^)/... ALL PROJECTS</a>
     </div>
   </article>
+  <style>
+    .project-tag-row .tag-all-projects-top {
+      margin-left: auto;
+    }
+  </style>
   <script is:inline>
     (() => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
