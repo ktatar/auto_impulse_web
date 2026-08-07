@@ -6,6 +6,7 @@ import { collectProjectTags, loadProjects, slugifyTag, splitProjects } from '../
 const projects = await loadProjects();
 const sections = splitProjects(projects);
 const currentTagSet = new Set(collectProjectTags(sections.current));
+const currentTags = Array.from(currentTagSet);
 const tags = collectProjectTags(projects).map((tag) => ({
   label: tag,
   slug: slugifyTag(tag),
@@ -43,7 +44,7 @@ const tags = collectProjectTags(projects).map((tag) => ({
         <h2 class="section-heading">Current projects</h2>
       </div>
       <div class="project-grid" data-project-grid>
-        {sections.current.map((project) => <ProjectCard project={project} highlightCurrentTags />)}
+        {sections.current.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
       </div>
       <p class="empty-state" hidden data-empty-state="current">No current projects match this tag.</p>
     </section>
@@ -53,7 +54,7 @@ const tags = collectProjectTags(projects).map((tag) => ({
         <h2 class="section-heading">Archive</h2>
       </div>
       <div class="project-grid" data-project-grid>
-        {sections.archive.map((project) => <ProjectCard project={project} />)}
+        {sections.archive.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
       </div>
       <p class="empty-state" hidden data-empty-state="archive">No archive projects match this tag.</p>
     </section>
@@ -90,7 +91,7 @@ const tags = collectProjectTags(projects).map((tag) => ({
 
     .project-filter-row .current-tag-highlight:not([aria-pressed='true']),
     .tag-row .current-tag-highlight {
-      background: #ff2fba41;
+      background: #ff2fba1f;
       border-color: var(--border-strong);
       color: #3a2432;
     }
