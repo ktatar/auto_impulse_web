@@ -4,9 +4,10 @@ import { slugifyTag } from '../lib/projects';
 
 interface Props {
   project: ProjectEntry;
+  highlightCurrentTags?: boolean;
 }
 
-const { project } = Astro.props as Props;
+const { project, highlightCurrentTags = false } = Astro.props as Props;
 const href = `/projects/${project.slug}`;
 const tagClasses = project.data.tags.map((tag) => `tag-${slugifyTag(tag)}`).join(' ');
 ---
@@ -19,7 +20,9 @@ const tagClasses = project.data.tags.map((tag) => `tag-${slugifyTag(tag)}`).join
   <p class="card-summary">{project.data.description}</p>
   <div class="tag-row" aria-label="Project tags">
     {project.data.tags.map((tag) => (
-      <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
+      <a class={`tag tag-link${highlightCurrentTags ? ' current-tag-highlight' : ''}`} href={`/projects?tag=${slugifyTag(tag)}`}>
+        {tag}
+      </a>
     ))}
   </div>
 </article>

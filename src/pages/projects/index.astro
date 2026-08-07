@@ -5,7 +5,12 @@ import { collectProjectTags, loadProjects, slugifyTag, splitProjects } from '../
 
 const projects = await loadProjects();
 const sections = splitProjects(projects);
-const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slugifyTag(tag) }));
+const currentTagSet = new Set(collectProjectTags(sections.current));
+const tags = collectProjectTags(projects).map((tag) => ({
+  label: tag,
+  slug: slugifyTag(tag),
+  current: currentTagSet.has(tag)
+}));
 ---
 <BaseLayout title="Projects | Kıvanç Tatar" description="Current projects and archive projects filtered by tag.">
   <div class="projects-page">
@@ -24,7 +29,9 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
         <div class="filter-row project-filter-row" data-tag-filter>
           <label class="filter-chip" for="filter-all">All</label>
           {tags.map((tag) => (
-            <label class="filter-chip" for={`filter-${tag.slug}`}>{tag.label}</label>
+            <label class={`filter-chip${tag.current ? ' current-tag-highlight' : ''}`} for={`filter-${tag.slug}`}>
+              {tag.label}
+            </label>
           ))}
         </div>
       </div>
@@ -36,7 +43,7 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
         <h2 class="section-heading">Current projects</h2>
       </div>
       <div class="project-grid" data-project-grid>
-        {sections.current.map((project) => <ProjectCard project={project} />)}
+        {sections.current.map((project) => <ProjectCard project={project} highlightCurrentTags />)}
       </div>
       <p class="empty-state" hidden data-empty-state="current">No current projects match this tag.</p>
     </section>
@@ -81,9 +88,16 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
       box-shadow: 3px 3px 0 var(--accent-yellow);
     }
 
-    .filter-toggle:focus-visible + .filter-chip {
-      outline: 2px solid var(--accent-cyan);
-      outline-offset: 2px;
+    .project-filter-row .current-tag-highlight:not([aria-pressed='true']),
+    .tag-row .current-tag-highlight {
+      background: #ff2fba41;
+      border-color: var(--border-strong);
+      color: #3a2432;
+    }
+
+    .project-filter-row .current-tag-highlight:not([aria-pressed='true']):hover,
+    .tag-row .current-tag-highlight:hover {
+      color: var(--accent);
     }
 
     .card {
