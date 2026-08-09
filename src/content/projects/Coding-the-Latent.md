@@ -2,7 +2,7 @@
 title: Coding the Latent
 description: A live-coding performance that turns latent-space navigation into musical material, produced and premiered at Center for Art and Media | ZKM Karlsruhe
 date: 2022-01
-status: archive
+status: highlights
 tags:
   - Live Performance
   - Musical AI

@@ -2,7 +2,7 @@
 title: Plastic Biosphere
 description: An audiovisual work exploring synthetic ecologies and machine-made sonic worlds, presented at Ars Electronica 2020 and produced as an album 
 date: 2020-08
-status: archive
+status: highlights
 tags:
   - Live Performance
   - Audiovisual

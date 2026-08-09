@@ -2,7 +2,7 @@
 title: "Exposing the Bias in Artificial Intelligence: Cyber Future"
 description: An audiovisual performance exposing how AI systems encode gendered and demographic associations in future speculations.
 date: 2024-08
-status: archive
+status: highlights
 tags:
   - Live Performance
   - Audiovisual

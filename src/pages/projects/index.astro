@@ -13,7 +13,7 @@ const tags = collectProjectTags(projects).map((tag) => ({
   current: currentTagSet.has(tag)
 }));
 ---
-<BaseLayout title="Projects | Kıvanç Tatar" description="Current projects and archive projects filtered by tag.">
+<BaseLayout title="Projects | Kıvanç Tatar" description="Current projects, archival highlights, and archive projects filtered by tag.">
   <div class="projects-page">
     <input class="filter-toggle" type="radio" name="project-filter" id="filter-all" checked aria-hidden="true" />
     {tags.map((tag) => (
@@ -43,6 +43,16 @@ const tags = collectProjectTags(projects).map((tag) => ({
         {sections.current.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
       </div>
       <p class="empty-state" hidden data-empty-state="current">No current projects match this tag.</p>
+    </section>
+
+    <section class="section" data-project-section="highlights">
+      <div class="section-header">
+        <h2 class="section-heading">Archival Highlights</h2>
+      </div>
+      <div class="project-grid" data-project-grid>
+        {sections.highlights.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
+      </div>
+      <p class="empty-state" hidden data-empty-state="highlights">No archival highlights match this tag.</p>
     </section>
 
     <section class="section" data-project-section="archive">
