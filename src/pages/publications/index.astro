@@ -28,11 +28,19 @@ const groups = groupPublications(publications);
         <div class="publication-list">
           {group.items.map((publication) => (
             <article class="publication-item">
-              <p class="publication-title home-publication-title">{publication.title}</p>
+              <p class="publication-title home-publication-title">
+                {publication.url ? (
+                  <a href={publication.url} target="_blank" rel="noreferrer">
+                    {publication.title}
+                  </a>
+                ) : (
+                  publication.title
+                )}
+              </p>
               <p class="publication-citation">{formatPublicationCitationAcm(publication)}</p>
               {publication.url && (
                 <a class="card-link" href={publication.url} target="_blank" rel="noreferrer">
-                  Open source
+                  Link
                 </a>
               )}
             </article>

@@ -711,6 +711,10 @@ main {
   border-top: 1px solid var(--border);
 }
 
+.publication-item:has(.card-link) {
+  padding-bottom: 0rem;
+}
+
 .publication-item:first-child {
   border-top: 0;
   padding-top: 0;
