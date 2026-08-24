@@ -7,7 +7,7 @@
 			"http://localhost:4321/"
 		],
 		"network": [
-			"http://10.89.0.2:4321/"
+					   "http://10.89.0.2:4321/"
 		]
 	},
 	"background": false,
