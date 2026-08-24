@@ -5,9 +5,15 @@ import { collectProjectTags, loadProjects, slugifyTag, splitProjects } from '../
 
 const projects = await loadProjects();
 const sections = splitProjects(projects);
-const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slugifyTag(tag) }));
+const currentTagSet = new Set(collectProjectTags(sections.current));
+const currentTags = Array.from(currentTagSet);
+const tags = collectProjectTags(projects).map((tag) => ({
+  label: tag,
+  slug: slugifyTag(tag),
+  current: currentTagSet.has(tag)
+}));
 ---
-<BaseLayout title="Projects | Kıvanç Tatar" description="Current projects and archive projects filtered by tag.">
+<BaseLayout title="Projects | Kıvanç Tatar" description="Current projects, archival highlights, and archive projects filtered by tag.">
   <div class="projects-page">
     <input class="filter-toggle" type="radio" name="project-filter" id="filter-all" checked aria-hidden="true" />
     {tags.map((tag) => (
@@ -17,14 +23,12 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
     <section class="hero" style="padding-bottom: 1.5rem;">
       <div class="hero-panel prose project-hero-panel">
         <h1>Projects</h1>
-        <p class="card-summary">
-          The list defaults to chronological order. Pick one tag to filter the project cards across both the current
-          and archive sections.
-        </p>
         <div class="filter-row project-filter-row" data-tag-filter>
           <label class="filter-chip" for="filter-all">All</label>
           {tags.map((tag) => (
-            <label class="filter-chip" for={`filter-${tag.slug}`}>{tag.label}</label>
+            <label class={`filter-chip${tag.current ? ' current-tag-highlight' : ''}`} for={`filter-${tag.slug}`}>
+              {tag.label}
+            </label>
           ))}
         </div>
       </div>
@@ -36,9 +40,19 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
         <h2 class="section-heading">Current projects</h2>
       </div>
       <div class="project-grid" data-project-grid>
-        {sections.current.map((project) => <ProjectCard project={project} />)}
+        {sections.current.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
       </div>
       <p class="empty-state" hidden data-empty-state="current">No current projects match this tag.</p>
+    </section>
+
+    <section class="section" data-project-section="highlights">
+      <div class="section-header">
+        <h2 class="section-heading">Archival Highlights</h2>
+      </div>
+      <div class="project-grid" data-project-grid>
+        {sections.highlights.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
+      </div>
+      <p class="empty-state" hidden data-empty-state="highlights">No archival highlights match this tag.</p>
     </section>
 
     <section class="section" data-project-section="archive">
@@ -46,7 +60,7 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
         <h2 class="section-heading">Archive</h2>
       </div>
       <div class="project-grid" data-project-grid>
-        {sections.archive.map((project) => <ProjectCard project={project} />)}
+        {sections.archive.map((project) => <ProjectCard project={project} currentTags={currentTags} />)}
       </div>
       <p class="empty-state" hidden data-empty-state="archive">No archive projects match this tag.</p>
     </section>
@@ -60,6 +74,14 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
 
     .project-filter-row {
       margin-top: 1rem;
+    }
+
+    .project-filter-row .filter-chip {
+      color: var(--text);
+    }
+
+    .project-sections .section-heading {
+      color: var(--very-muted);
     }
 
     .filter-toggle {
@@ -79,11 +101,6 @@ const tags = collectProjectTags(projects).map((tag) => ({ label: tag, slug: slug
       color: #111111;
       border-color: var(--border-strong);
       box-shadow: 3px 3px 0 var(--accent-yellow);
-    }
-
-    .filter-toggle:focus-visible + .filter-chip {
-      outline: 2px solid var(--accent-cyan);
-      outline-offset: 2px;
     }
 
     .card {

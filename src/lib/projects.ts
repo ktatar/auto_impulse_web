@@ -6,7 +6,7 @@ export type ProjectEntry = {
     title: string;
     description: string;
     date: Date;
-    status: 'current' | 'archive';
+    status: 'current' | 'archive' | 'highlights';
     tags: string[];
   };
 };
@@ -39,6 +39,7 @@ export function sortProjects(entries: ProjectEntry[]) {
 export function splitProjects(entries: ProjectEntry[]) {
   return {
     current: sortProjects(entries.filter((entry) => entry.data.status === 'current')),
+    highlights: sortProjects(entries.filter((entry) => entry.data.status === 'highlights')),
     archive: sortProjects(entries.filter((entry) => entry.data.status === 'archive'))
   };
 }

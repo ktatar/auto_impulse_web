@@ -16,7 +16,8 @@
       "type": "string",
       "enum": [
         "current",
-        "archive"
+        "archive",
+        "highlights"
       ]
     },
     "tags": {

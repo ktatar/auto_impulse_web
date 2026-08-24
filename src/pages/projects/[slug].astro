@@ -1,21 +1,36 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { slugifyTag } from '../../lib/projects';
+import { collectProjectTags, loadProjects, slugifyTag, splitProjects } from '../../lib/projects';
 
 type ProjectEntry = CollectionEntry<'projects'>;
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  return projects.map((project) => ({
-    params: { slug: project.id },
-    props: { project }
-  }));
+  return projects.flatMap((project) => {
+    const fileSlug = project.filePath
+      ? project.filePath
+          .replace(/\\/g, '/')
+          .split('/')
+          .pop()
+          ?.replace(/\.md$/i, '')
+      : undefined;
+    const slugVariants = Array.from(
+      new Set([project.id, project.id.toLowerCase(), project.id.toUpperCase(), fileSlug].filter(Boolean))
+    );
+
+    return slugVariants.map((slug) => ({
+      params: { slug },
+      props: { project }
+    }));
+  });
 }
 
 const { project } = Astro.props as { project: ProjectEntry };
 const { Content } = await render(project);
 const year = new Date(project.data.date).getFullYear();
+const allProjects = await loadProjects();
+const currentTagSet = new Set(collectProjectTags(splitProjects(allProjects).current));
 ---
 <BaseLayout title={`${project.data.title} | Kıvanç Tatar`} description={project.data.description}>
   <article class="section content-card prose project-detail">
@@ -24,14 +39,157 @@ const year = new Date(project.data.date).getFullYear();
     </div>
     <h1 class="entry-title">{project.data.title}</h1>
     <p class="page-intro">{project.data.description}</p>
-    <div class="tag-row" aria-label="Project tags">
-      {project.data.tags.map((tag) => (
-        <a class="tag tag-link" href={`/projects?tag=${slugifyTag(tag)}`}>{tag}</a>
-      ))}
+    <div class="tag-row project-tag-row" aria-label="Project tags">
+      {project.data.tags.map((tag) => {
+        const isCurrentTag = currentTagSet.has(tag);
+        return (
+          <a class={`tag tag-link${isCurrentTag ? ' current-tag-highlight' : ''}`} href={`/projects?tag=${slugifyTag(tag)}`}>
+            {tag}
+          </a>
+        );
+      })}
+      <a class="tag tag-link tag-all-projects-top" href="/projects">==(/^-^)/... ALL PROJECTS</a>
     </div>
     <Content />
     <div class="card-footer">
-      <a class="card-link" href="/projects">Back to projects</a>
+      <a class="tag tag-link" href="/projects">==(/^-^)/... ALL PROJECTS</a>
     </div>
   </article>
+  <style>
+    .project-tag-row .tag-all-projects-top {
+      margin-left: auto;
+    }
+  </style>
+  <script is:inline>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const sliders = document.querySelectorAll('.media-slider-track');
+
+      sliders.forEach((track) => {
+        const slider = track.closest('.media-slider');
+        if (!slider) {
+          return;
+        }
+
+        const configuredInterval = Number.parseInt(slider.getAttribute('data-autoplay-ms') ?? '', 10);
+        const autoAdvanceInterval = Number.isFinite(configuredInterval)
+          ? Math.max(1200, configuredInterval)
+          : 5000;
+
+        const slides = Array.from(track.querySelectorAll('.media-slide'));
+        if (slides.length < 2) {
+          return;
+        }
+
+        let activeIndex = 0;
+        let autoAdvanceTimer = null;
+
+        const updateActiveIndex = () => {
+          const currentLeft = track.scrollLeft;
+          const maxScrollLeft = track.scrollWidth - track.clientWidth;
+
+          if (currentLeft <= 1) {
+            activeIndex = 0;
+            return;
+          }
+
+          if (currentLeft >= maxScrollLeft - 1) {
+            activeIndex = slides.length - 1;
+            return;
+          }
+
+          let nearest = 0;
+          let minDistance = Number.POSITIVE_INFINITY;
+
+          slides.forEach((slide, index) => {
+            const distance = Math.abs(slide.offsetLeft - currentLeft);
+            if (distance < minDistance) {
+              minDistance = distance;
+              nearest = index;
+            }
+          });
+
+          activeIndex = nearest;
+        };
+
+        const scrollToIndex = (nextIndex, smooth = true) => {
+          activeIndex = (nextIndex + slides.length) % slides.length;
+          const behavior = smooth ? 'smooth' : 'auto';
+          track.scrollTo({ left: slides[activeIndex].offsetLeft, behavior });
+        };
+
+        const stopAutoAdvance = () => {
+          if (autoAdvanceTimer !== null) {
+            window.clearInterval(autoAdvanceTimer);
+            autoAdvanceTimer = null;
+          }
+        };
+
+        const startAutoAdvance = () => {
+          stopAutoAdvance();
+          if (prefersReducedMotion.matches) {
+            return;
+          }
+
+          autoAdvanceTimer = window.setInterval(() => {
+            scrollToIndex(activeIndex + 1);
+          }, autoAdvanceInterval);
+        };
+
+        track.addEventListener('scroll', updateActiveIndex, { passive: true });
+
+        slider.querySelectorAll('.media-slide-arrow.prev').forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+            updateActiveIndex();
+            scrollToIndex(activeIndex - 1);
+            startAutoAdvance();
+          });
+        });
+
+        slider.querySelectorAll('.media-slide-arrow.next').forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+            updateActiveIndex();
+            scrollToIndex(activeIndex + 1);
+            startAutoAdvance();
+          });
+        });
+
+        track.addEventListener('pointerenter', stopAutoAdvance);
+        track.addEventListener('pointerleave', startAutoAdvance);
+        track.addEventListener('focusin', stopAutoAdvance);
+        track.addEventListener('focusout', startAutoAdvance);
+
+        const nav = slider.querySelector('.media-slide-nav');
+        if (nav) {
+          nav.addEventListener('pointerenter', stopAutoAdvance);
+          nav.addEventListener('pointerleave', startAutoAdvance);
+          nav.addEventListener('focusin', stopAutoAdvance);
+          nav.addEventListener('focusout', startAutoAdvance);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopAutoAdvance();
+          } else {
+            startAutoAdvance();
+          }
+        });
+
+        if (window.location.hash) {
+          const hashTarget = track.querySelector(window.location.hash);
+          if (hashTarget) {
+            const index = slides.indexOf(hashTarget);
+            if (index >= 0) {
+              scrollToIndex(index, false);
+            }
+          }
+        }
+
+        updateActiveIndex();
+        startAutoAdvance();
+      });
+    })();
+  </script>
 </BaseLayout>
