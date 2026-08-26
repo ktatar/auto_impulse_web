@@ -4,7 +4,6 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 export default defineConfig({
   site: 'https://kivanctatar.com',
-  base: '/auto_impulse_web',
   devToolbar: { enabled: false },
   markdown: {
     processor: unified({
